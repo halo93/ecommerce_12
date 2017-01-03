@@ -40,3 +40,7 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+.idea/
+/test/
+/config/database.yml
+/public/uploads/
