@@ -1,6 +1,6 @@
 @import "materialize/components/color";
 $primary-color: color("red", "base") !default;
-$secondary-color: color("", "") !default;
+//$secondary-color: color("", "") !default;
 @import "materialize";
 @import "materialize/extras/nouislider";
 
@@ -36,11 +36,14 @@ main {
 .dropdown-li{
   background-color: #fff;
   min-height: 32.3px !important;
-  padding-left: 5px;
   a.wide{
     display: block !important;
     color: red !important;
   }
+}
+
+.locale{
+  min-width: 150px;
 }
 
 footer{

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  get "/pages/*page" => "pages#show"
-  root "pages#home"
+  scope "(:locale)", locale: /en|vn|jp/ do
+    get "/pages/*page" => "pages#show"
+    root "pages#home"
+  end
 end

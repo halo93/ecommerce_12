@@ -20,9 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  title: "Welcome to Gift giving and consulting service"
+  title: "Welcome to Pet GiftBox"
   eng: "English"
   viet: "Vietnamese"
+  jap: "Japanese"
   copy: "2016 by Long D.H. & Duc N.V & Nam D. V."
   pages:
     home:
