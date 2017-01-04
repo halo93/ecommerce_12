@@ -18,6 +18,7 @@ AllCops:
     - test/**
     - config/initializers/**
     - config/environments/**
+    - test/models/**
 
 # Indent private/protected/public as deep as method definitions
 Style/AccessModifierIndentation:
