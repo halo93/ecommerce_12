@@ -13,4 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require materialize-sprockets
+//= require materialize/extras/nouislider
+//= require i18n
+//= require i18n.js
+//= require i18n/translations
 //= require_tree .
