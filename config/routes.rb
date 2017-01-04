@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   scope "(:locale)", locale: /en|vn|jp/ do
     namespace :admin do
       root "categories#index"
@@ -8,4 +9,5 @@ Rails.application.routes.draw do
     get "/pages/*page" => "pages#show"
     root "pages#home"
   end
+  resources :users
 end

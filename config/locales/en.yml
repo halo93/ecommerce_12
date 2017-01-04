@@ -25,6 +25,8 @@ en:
   viet: "Vietnamese"
   jap: "Japanese"
   copy: "2016 by Long D.H. & Duc N.V & Nam D. V."
+  signout: "Sign out"
+  profile: "Profile"
   pages:
     home:
       title: "Home"
