@@ -21,3 +21,16 @@
 
 en:
   title: "Welcome to Gift giving and consulting service"
+  eng: "English"
+  viet: "Vietnamese"
+  copy: "2016 by Long D.H. & Duc N.V & Nam D. V."
+  pages:
+    home:
+      title: "Home"
+      content: "This is our home page"
+    help:
+      title: "Help"
+      content: "This is our help page"
+    about:
+      title: "About"
+      content: "This is our about page"
