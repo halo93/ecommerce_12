@@ -1,11 +1,21 @@
-<ul id="dropdown1" class="dropdown-content">
-  <li class="dropdown-li center">
-    <a href="#" class="flag-icon flag-icon-us wide"></a>
-    <%= t "eng" %>
+<ul id="dropdown1" class="dropdown-content locale">
+  <li class="dropdown-li center <%= active_class_locale :en %>">
+    <%= link_to locale: :en do %>
+      <span class = "flag-icon flag-icon-us wide"></span>
+      <%= t "eng" %>
+    <% end %>
   </li>
-  <li class="dropdown-li center">
-    <a href="#" class="flag-icon flag-icon-vn wide"></a>
-    <%= t "viet" %>
+  <li class="dropdown-li center <%= active_class_locale :vn %>">
+    <%= link_to locale: :vn do %>
+      <span class = "flag-icon flag-icon-vn wide"></span>
+      <%= t "viet" %>
+    <% end %>
+  </li>
+  <li class="dropdown-li center <%= active_class_locale :jp %>">
+    <%= link_to locale: :jp do %>
+      <span class = "flag-icon flag-icon-jp wide"></span>
+      <%= t "jap" %>
+    <% end %>
   </li>
 </ul>
 <nav>
@@ -17,13 +27,13 @@
       <li class="tab-nav <%= active_class root_url %>">
         <a href="<%= root_url %>"><%= t "pages.home.title" %></a>
       </li>
-      <li class="tab-nav <%= active_class "/pages/help" %>">
-        <a href="<%= "/pages/help" %>">
+      <li class="tab-nav <%= active_class "/#{I18n.locale}/pages/help" %>">
+        <a href="<%= "/#{I18n.locale}/pages/help" %>">
           <%= t "pages.help.title" %>
         </a>
       </li>
-      <li class="tab-nav <%= active_class "/pages/about" %>">
-        <a href="<%= "/pages/about" %>">
+      <li class="tab-nav <%= active_class "/#{I18n.locale}/pages/about" %>">
+        <a href="<%= "/#{I18n.locale}/pages/about" %>">
           <%= t "pages.about.title" %>
         </a>
       </li>

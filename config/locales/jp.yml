@@ -19,19 +19,19 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-vn:
-  title: "Chào mừng đến với Pet GiftBox"
-  eng: "Tiếng Anh"
-  viet: "Tiếng Việt"
-  jap: "Tiếng Nhật"
+jp:
+  title: "PET GIFT BOX へようこそ"
+  eng: "英語"
+  viet: "ベトナム語"
+  jap: "日本語"
   copy: "2016 by Long D.H. & Duc N.V & Nam D. V."
   pages:
     home:
-      title: "Trang chủ"
-      content: "Đây là trang chủ"
+      title: "ホームページ"
+      content: "これは私たちのホームページです"
     help:
-      title: "Trợ giúp"
-      content: "Đây là trang trợ giúp"
+      title: "ヘルプページ"
+      content: "これは私たちのヘルプページです"
     about:
-      title: "Giới thiệu"
-      content: "Đây là trang giới thiệu"
+      title: "紹介ページ"
+      content: "これは私たちの紹介ページです"
