@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title yield :title %></title>
+    <%= render "layouts/head" %>
+    <%= render "layouts/shim" %>
+  </head>
+  <body style="<%= "padding-top: 0px" if current_page? root_url %>">
+    <div class="page-flexbox-wrapper">
+      <header>
+        <%= render "layouts/admin_header" %>
+      </header>
+      <main>
+        <div class="container" id="main-content">
+          <% flash.each do |message_type, message| %>
+            <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+          <% end %>
+          <%= yield %>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
