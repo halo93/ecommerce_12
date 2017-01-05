@@ -1,3 +1,4 @@
 class Category < ApplicationRecord
-  has_manny :products, :suggests
+  has_many :products
+  has_many :suggests
 end

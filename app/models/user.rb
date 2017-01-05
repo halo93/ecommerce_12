@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :orders
   has_many :favorites
   has_many :suggests
+  before_save :init_role
 
   def self.from_omniauth auth
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
@@ -16,5 +17,12 @@ class User < ApplicationRecord
       user.avatar = auth.info.image
       user.password = Devise.friendly_token[0, 20]
     end
+  end
+
+  enum role: [:admin, :user]
+
+  private
+  def init_role
+    self.role ||= :user
   end
 end
