@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {omniauth_callbacks: "callbacks"}
   scope "(:locale)", locale: /en|vn|jp/ do
     namespace :admin do
       root "categories#index"
