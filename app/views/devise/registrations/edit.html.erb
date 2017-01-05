@@ -3,6 +3,10 @@
 <%= form_for resource, as: resource_name,
   url: registration_path(resource_name), html: {method: :put} do |f| %>
   <%= devise_error_messages! %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -33,14 +37,14 @@
   </div>
 
   <div class="actions">
-    <%= f.submit (t ".update") %>
+    <%= f.submit (t ".update"), class: "btn" %>
   </div>
 <% end %>
 
 <h3><%= t ".cancel" %></h3>
 
 <p>
-  <%= t ".unhappy" %><%= button_to (t ".cancel"),registration_path(resource_name),
-    data: {confirm: "Are you sure?"}, method: :delete %>
+  <%= t ".uphappy" %><%= button_to (t ".cancel"),registration_path(resource_name),
+    data: {confirm: "Are you sure?"}, method: :delete, class: "btn" %>
 </p>
 <%= link_to t(".back"), :back %>
