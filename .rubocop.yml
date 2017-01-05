@@ -19,6 +19,7 @@ AllCops:
     - config/initializers/**
     - config/environments/**
     - test/models/**
+    - db/migrate/**
 
 # Indent private/protected/public as deep as method definitions
 Style/AccessModifierIndentation:

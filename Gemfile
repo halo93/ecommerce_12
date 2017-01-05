@@ -28,6 +28,9 @@ gem "rubocop", "~> 0.46.0", require: false
 gem "materialize-sass"
 gem "i18n-js", ">= 3.0.0.rc11"
 gem "flag-icons-rails"
+gem "config"
+gem "devise"
+gem "omniauth-facebook"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 3.0"
 # Use ActiveModel has_secure_password

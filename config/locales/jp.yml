@@ -25,6 +25,8 @@ jp:
   viet: "ベトナム語"
   jap: "日本語"
   copy: "2016 by Long D.H. & Duc N.V & Nam D. V."
+  signout: "ログアウト"
+  profile: "個人のページ"
   pages:
     home:
       title: "ホームページ"

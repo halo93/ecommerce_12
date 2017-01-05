@@ -25,6 +25,8 @@ vn:
   viet: "Tiếng Việt"
   jap: "Tiếng Nhật"
   copy: "2016 by Long D.H. & Duc N.V & Nam D. V."
+  signout: "Đăng xuất"
+  profile: "Trang cá nhân"
   pages:
     home:
       title: "Trang chủ"

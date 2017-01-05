@@ -37,6 +37,17 @@
           <%= t "pages.about.title" %>
         </a>
       </li>
+      <% if user_signed_in? %>
+        <li><%= current_user.email %></li>
+        <li>
+          <span>
+            <%= image_tag current_user.avatar if current_user.avatar.present? %>
+          </span>
+        </li>
+        <li>
+          <%= link_to (t "signout"), destroy_user_session_path, method: :delete %>
+        </li>
+      <% end %>
       <li class="tab-nav">
         <a class="dropdown-button" data-activates="dropdown1">
           <i class="material-icons right">language</i>
