@@ -1,0 +1,31 @@
+<div class="row">
+  <a class="waves-effect waves-light btn" href="#modal1"><%= t".add" %></a>
+  <%= form_tag admin_categories_path, method: :post,
+    id: "add-category-form" do %>
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <div>
+          <label><%= t".parrent_category" %></label>
+          <%= select_tag :parent_id, options_for_select(@categories.collect {
+            |cate| ["#{'-' * cate.depth} #{cate.name}", cate.id]}, params[:parent_id]),
+            {class: "select", id: "parent_category", include_blank: t(".none")} %>
+        </div>
+        <div>
+          <label><%= t ".name" %></label>
+          <%= text_field_tag :name, params[:name], class: "form-control" %>
+        </div>
+        <div>
+          <label><%= t ".description" %></label>
+          <%= text_area_tag :description, params[:description],
+            class: "form-control" %>
+       </div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-action modal-close waves-effect waves-green btn-flat" data-dismiss="modal">
+        <%= t ".cancel" %>
+        <button class="modal-action modal-close waves-effect waves-green btn-flat">
+        <%= submit_tag t(".add")%>
+      </div>
+    </div>
+  <% end %>
+<div>
