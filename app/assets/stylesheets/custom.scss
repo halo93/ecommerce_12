@@ -3,9 +3,9 @@ $primary-color: color("red", "base") !default;
 //$secondary-color: color("", "") !default;
 @import "materialize";
 @import "materialize/extras/nouislider";
-
+@import "variable.scss";
 body {
-  color: #ee6e73;
+  color: $body-color;
 }
 
 .page-flexbox-wrapper{
@@ -49,4 +49,50 @@ main {
 footer{
   margin-top: 0px !important;
   padding-top: 0px !important;
+}
+
+.side-nav.custom-side-nav {
+  width: 240px;
+  background: $nav-admin-color;
+}
+
+.side-nav.custom-side-nav li {
+  padding: 0;
+}
+
+.side-nav.custom-side-nav li:hover {
+  background: none;
+}
+
+.side-nav.custom-side-nav li a {
+  font-size: 16px;
+  color: $color-side;
+  width: 100%;
+  padding: 0 4% 0 4%;
+  line-height: 55px;
+  height: 55px;
+}
+
+.side-nav.custom-side-nav li a:active, .side-nav.custom-side-nav li a:hover {
+  color: white;
+  background: $color-nav;
+}
+
+.side-nav.custom-side-nav li a i {
+  position: relative;
+  top: 15px;
+  float: right;
+}
+
+.side-nav.custom-side-nav .badge {
+  margin-right: 25px;
+  height: 19px;
+  line-height: 18px;
+  margin-top: 18px;
+  border-radius: 3px;
+  width: auto;
+  min-width: auto;
+  font-size: 11.5px;
+  text-align: center;
+  padding: 1px  5px 0 4px;
 }
