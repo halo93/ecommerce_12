@@ -16,6 +16,14 @@ class ApplicationController < ActionController::Base
     redirect_to root_path unless current_user.admin?
   end
 
+  def after_sign_in_path_for resource
+    if resource.admin?
+      admin_root_path
+    else
+      session[:previous_url] || root_path
+    end
+  end
+
   private
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
