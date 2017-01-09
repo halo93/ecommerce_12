@@ -121,15 +121,27 @@ footer{
   will-change: width, height;
 }
 
+#suggest-product{
+  bottom: 7px;
+}
+
+.footer-copyright{
+  padding-left: 20px;
+}
+
 .login-btn {
   width: 30%;
   padding-top: 2%;
 }
 
-.row {
-  padding-left: 150px;
-}
-
 .select {
   display: inline !important;
+}
+
+.pagination{
+  text-align: center;
+}
+
+.admin-panel{
+  padding-left: 240px;
 }

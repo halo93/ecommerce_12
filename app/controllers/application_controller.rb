@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
   before_action :set_locale
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :new_suggestion, :load_all_categories
 
   rescue_from CanCan::AccessDenied do |_exception|
     redirect_to root_path
@@ -24,9 +25,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def new_suggestion
+    @suggest = Suggest.new
+  end
+
   private
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
+  end
+
+  def load_all_categories
+    @categories = Category.select :name, :id, :depth
   end
 
   protected

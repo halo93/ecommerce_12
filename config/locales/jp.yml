@@ -27,6 +27,8 @@ jp:
   copy: "2016 by Long D.H. & Duc N.V & Nam D. V."
   signout: "ログアウト"
   profile: "個人のページ"
+  display: "現す"
+  records: "文書"
   pages:
     home:
       title: "ホームページ"

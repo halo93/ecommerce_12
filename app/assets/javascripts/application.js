@@ -19,3 +19,13 @@
 //= require i18n.js
 //= require i18n/translations
 //= require_tree .
+
+$(document).on('turbolinks:load', function() {
+  $('.modal').modal();
+});
+
+$(function(){
+  $('#show-limit').on('change', function(){
+    $(this).closest('form').trigger('submit');
+  });
+});

@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col s12">
+    <%= simple_form_for @suggest do |f| %>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.input :title %>
+        </div>
+        <div class="input-field col s12">
+          <%= f.text_area :content, class: "materialize-textarea", id: "textarea1" %>
+          <label for="textarea1">Textarea</label>
+        </div>
+      </div>
+      <div class="row">
+        <label>Category</label>
+        <%= select_tag :category_id, options_for_select(@categories.
+          collect{|category| [category.name, category.id]},
+          params[:category_id]), class: "browser-default",
+          include_blank: t("words.index.all") %>
+      </div>
+      <div class="row">
+        <%= f.button :submit, class: "modal-action modal-close
+          waves-effect waves-green btn-flat btn right" %>
+      </div>
+    <% end %>
+  </div>
+</div>
