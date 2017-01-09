@@ -27,6 +27,8 @@ en:
   copy: "2016 by Long D.H. & Duc N.V & Nam D. V."
   signout: "Sign out"
   profile: "Profile"
+  display: "Display"
+  records: "record(s)"
   pages:
     home:
       title: "Home"
