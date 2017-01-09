@@ -21,8 +21,4 @@ class Admin::CategoriesController < ApplicationController
   def category_params
     params.permit :name, :description
   end
-
-  def load_all_categories
-    @categories = Category.all
-  end
 end

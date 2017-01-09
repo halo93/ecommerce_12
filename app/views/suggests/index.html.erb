@@ -1,0 +1,19 @@
+<% provide :title, t(".title") %>
+<h2 class="center"><i class="material-icons">feedback</i><%= t "title" %></h2>
+<div class="row">
+  <div class="col s12 m4">
+    <%= search_form_for @search, url: suggests_path do |f|%>
+      <span><%= t "display" %></span>
+      <%= select_tag :limit,
+        options_from_collection_for_select(Settings.show_limit,
+        :second, :second, selected: params[:limit] || Settings.show_limit.limit),
+        id: "show-limit", style: "display: block" %>
+      <%= f.submit "search", style: "display: none" %>
+      <span><%= t "records" %></span>
+    <% end %>
+  </div>
+</div>
+<div class="row">
+  <%= render @suggests %>
+</div>
+<%= paginate @suggests %>

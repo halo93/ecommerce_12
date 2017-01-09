@@ -32,6 +32,10 @@ gem "config"
 gem "devise"
 gem "omniauth-facebook"
 gem "cancancan"
+gem "simple_form"
+gem "kaminari"
+gem "ransack"
+gem "ffaker"
 
 group :development, :test do
   gem "byebug", platform: :mri
