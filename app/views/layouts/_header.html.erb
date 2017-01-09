@@ -49,6 +49,8 @@
             <%= image_tag(current_user.avatar, class: "circle") if current_user.avatar.present? %>
             <%= link_to (t"profile"), edit_user_registration_path %>
             <div class="divider"></div>
+            <%= link_to (t "suggest"), suggests_path %>
+            <div class="divider"></div>
             <%= link_to (t "signout"), destroy_user_session_path, method: :delete %>
           </li>
         </ul>

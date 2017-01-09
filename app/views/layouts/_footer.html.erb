@@ -1,7 +1,16 @@
+<div class="fixed-action-btn suggest-product">
+  <a class="red waves-effect waves-light btn" href="#modal1">
+    <%= t ".suggest_title" %> <i class="material-icons right">cloud</i>
+  </a>
+</div>
+<div id="modal1" class="modal bottom-sheet">
+  <div class="modal-content">
+    <h4><%= t ".suggest_title" %></h4>
+    <%= render template: "suggests/new" %>
+  </div>
+</div>
 <footer class="page-footer">
   <div class="footer-copyright">
-    <div class="container">
-      © <%= t "copy" %>
-    </div>
+    © <%= t "copy" %>
   </div>
 </footer>
