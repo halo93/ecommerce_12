@@ -3,6 +3,9 @@ class CreateCategories < ActiveRecord::Migration[5.0]
     create_table :categories do |t|
       t.string :name
       t.string :description
+      t.integer :depth, null: false, default: 0
+      t.integer :lft, null: false, index: true
+      t.integer :rgt, null: false, index: true
 
       t.timestamps
     end

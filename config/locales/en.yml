@@ -37,3 +37,16 @@ en:
     about:
       title: "About"
       content: "This is our about page"
+  admin:
+    categories:
+      index:
+        add: "Add"
+        cancel: "Cancel"
+        name: "Name"
+        description: "Description"
+        parent_category: "Parrent category"
+      create:
+        create_success: "Create category success"
+        create_fail: "Create category fail"
+      parent_category:
+        none: "None"
