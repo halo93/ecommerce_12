@@ -15,7 +15,7 @@
         <%= select_tag :category_id, options_for_select(@categories
           .collect{|category| [category.name, category.id]},
           params[:category_id]), class: "browser-default",
-          include_blank: t("words.index.all") %>
+          include_blank: t(".none") %>
       </div>
       <div class="row">
         <%= f.button :submit, class: "modal-action modal-close

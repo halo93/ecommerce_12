@@ -29,6 +29,14 @@ en:
   profile: "Profile"
   display: "Display"
   records: "record(s)"
+  textarea: "Description"
+  activerecord:
+    attributes:
+      suggest:
+        statuses:
+          processing: "Processing..."
+          accepted: "Accepted"
+          rejected: "Rejected"
   pages:
     home:
       title: "Home"
@@ -39,6 +47,26 @@ en:
     about:
       title: "About"
       content: "This is our about page"
+  layouts:
+    footer:
+      suggest_title: "Suggest a product"
+    admin_header:
+      dashboard: "Dashboard"
+      order: "Order"
+      product: "Product"
+      users: "Users"
+      suggest: "Suggests"
+      categories: "Categories"
+  suggests:
+    index:
+      title: "Suggests list"
+    create:
+      danger: "Fail to add a suggest"
+      success: "Successfully added a new suggest"
+    new:
+      category: "Category"
+      none: "None"
+  suggest: "Suggests list"
   admin:
     categories:
       index:
@@ -46,7 +74,7 @@ en:
         cancel: "Cancel"
         name: "Name"
         description: "Description"
-        parent_category: "Parrent category"
+        parent_category: "Parent category"
       create:
         create_success: "Create category success"
         create_fail: "Create category fail"

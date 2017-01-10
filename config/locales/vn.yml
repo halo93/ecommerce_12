@@ -29,13 +29,78 @@ vn:
   profile: "Trang cá nhân"
   display: "Hiển thị"
   records: "bản ghi"
+  textarea: "Mô tả"
+  activerecord:
+    attributes:
+      suggest:
+        statuses:
+          processing: "Processing..."
+          accepted: "Accepted"
+          rejected: "Rejected"
   pages:
     home:
-      title: "Trang chủ"
-      content: "Đây là trang chủ"
+     title: "Trang chủ"
+     content: "Đây là trang chủ"
     help:
       title: "Trợ giúp"
       content: "Đây là trang trợ giúp"
     about:
       title: "Giới thiệu"
       content: "Đây là trang giới thiệu"
+  layouts:
+    footer:
+      suggest_title: "Gợi ý sản phẩm"
+    admin_header:
+      dashboard: "Dashboard"
+      order: "Quản lý đơn hàng"
+      product: "Quản lý sản phẩm"
+      users: "Quản lý người dùng"
+      suggest: "Quản lý gợi ý"
+      categories: "Quản lý danh mục"
+  suggests:
+    index:
+      title: "Danh sách gợi ý"
+    create:
+      danger: "Thêm gợi ý thất bại"
+      success: "Thêm gợi ý thành công"
+    new:
+      category: "Danh mục"
+      none: "Không có"
+  activerecord:
+    errors:
+      models:
+        suggest:
+          attributes:
+            title:
+              blank: "Tiêu đề không được bỏ trống"
+  suggest: "Danh sách gợi ý"
+  admin:
+    categories:
+      index:
+        add: "Thêm"
+        cancel: "Hủy bỏ"
+        name: "Tên danh mục"
+        description: "Mô tả"
+        parent_category: "Danh mục cha"
+      create:
+        create_success: "Thêm danh mục thành công"
+        create_fail: "Thêm danh mục thất bại"
+      parent_category:
+        none: "Không có"
+  datetime:
+    distance_in_words:
+      x_days:
+        one: "1 ngày trước"
+        other: "%{count} ngày trước"
+      x_minutes:
+        one: "1 phút trước"
+        other: "%{count} phút trước"
+      about_x_hours:
+        one: "Khoảng 1 giờ"
+        other: "Khoảng %{count} giờ trước"
+      less_than_x_minutes:
+        one: "Chưa tới 1 phút trước"
+        other: "Khoảng %{count} phút trước"
+  views:
+    pagination:
+      truncate: "..."
