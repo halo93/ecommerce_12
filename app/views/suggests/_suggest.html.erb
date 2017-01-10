@@ -4,8 +4,8 @@
       <span class="card-title">
         <%= suggest.title %>
       </span>
-      <span class="right">
-        <%= suggest.status %>
+      <span class="right white-text badge red">
+        <%= Suggest.human_enum_name :status, suggest.status %>
       </span>
       <p><%= suggest.content %></p>
     </div>
