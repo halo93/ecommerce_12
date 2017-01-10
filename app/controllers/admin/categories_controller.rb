@@ -5,6 +5,9 @@ class Admin::CategoriesController < ApplicationController
   layout "admin"
 
   def index
+    params[:limit] ||= Settings.show_limit.show_6
+    @categories = Category.order_by_creation_time
+      .page(params[:page]).per params[:limit]
   end
 
   def create
