@@ -1,6 +1,6 @@
 class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
-  scope :order_by_creation_time, ->{order created_at: :desc}
+  scope :order_by_creation_time, ->{order created_at: :asc}
   scope :order_by_updated_time, ->{order updated_at: :desc}
 
   def self.human_enum_name enum_name, enum_value

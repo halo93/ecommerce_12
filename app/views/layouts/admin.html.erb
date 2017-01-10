@@ -10,7 +10,7 @@
       <header>
         <%= render "layouts/admin_header" %>
       </header>
-      <main>
+      <main class="admin-panel">
         <div class="container" id="main-content">
           <% flash.each do |message_type, message| %>
             <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>

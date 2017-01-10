@@ -29,6 +29,10 @@ en:
   profile: "Profile"
   display: "Display"
   records: "record(s)"
+  time:
+    formats:
+      date_format: "%m - %d - %Y"
+      date_time: "%m/%d/%Y %H:%M"
   textarea: "Description"
   activerecord:
     attributes:
@@ -74,9 +78,12 @@ en:
         cancel: "Cancel"
         name: "Name"
         description: "Description"
-        parent_category: "Parent category"
+        parent_category: "Parrent category"
+        edit: "Edit"
       create:
         create_success: "Create category success"
         create_fail: "Create category fail"
       parent_category:
         none: "None"
+      add_category:
+        add: "ADD"
