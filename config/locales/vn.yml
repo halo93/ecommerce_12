@@ -29,6 +29,10 @@ vn:
   profile: "Trang cá nhân"
   display: "Hiển thị"
   records: "bản ghi"
+  time:
+    formats:
+      date_format: "%m - %d - %Y"
+      date_time: "%m/%d/%Y %H:%M"
   textarea: "Mô tả"
   activerecord:
     attributes:
@@ -82,11 +86,29 @@ vn:
         name: "Tên danh mục"
         description: "Mô tả"
         parent_category: "Danh mục cha"
+        number: "STT"
+        created_at: "ngày tạo"
+        option: "lựa chọn"
+        edit: "sửa"
+        delete: "xóa"
       create:
         create_success: "Thêm danh mục thành công"
         create_fail: "Thêm danh mục thất bại"
       parent_category:
         none: "Không có"
+    products:
+      index:
+        add: "thêm"
+        cancel: "hủy bỏ"
+        name: "tên"
+        parent_category: "thể loại"
+        product_code: "mã sản phẩm"
+        image: "ảnh"
+        price: "giá"
+        in_stock: "kho hàng"
+      create:
+        product_created: "thêm mới một sản phẩm thành công"
+        fail_to_create: "lỗi khi thêm mới một sản phẩm"
   datetime:
     distance_in_words:
       x_days:

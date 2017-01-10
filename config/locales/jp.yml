@@ -29,6 +29,10 @@ jp:
   profile: "個人のページ"
   display: "現す"
   records: "文書"
+  time:
+    formats:
+      date_format: "%m - %d - %Y"
+      date_time: "%m/%d/%Y %H:%M"
   textarea: "説明"
   activerecord:
     attributes:
@@ -75,8 +79,30 @@ jp:
         name: "名"
         description: "説明"
         parent_category: "親カテゴリ"
+        number: "番号"
+        created_at: "〜で作成された"
+        option: "オプション"
+        edit: "編集"
+        delete: "削除"
       create:
         create_success: "カテゴリの成功を作成する"
         create_fail: "カテゴリの作成に失敗する"
       parent_category:
         none: "なし"
+        create_success: "カテゴリを正常に作成する"
+        create_fail: "カテゴリの作成に失敗しました"
+      parent_category:
+        none: "なし"
+    products:
+      index:
+        add: "追加する"
+        cancel: "キャンセル"
+        name: "名"
+        parent_category: "親カテゴリ"
+        product_code: "製品コード"
+        image: "画像"
+        price: "価格"
+        in_stock: "株式"
+      create:
+        product_created: "製品を正常に追加する"
+        fail_to_create: "製品の作成に失敗する"

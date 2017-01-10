@@ -36,6 +36,9 @@ gem "simple_form"
 gem "kaminari"
 gem "ransack"
 gem "ffaker"
+gem "carrierwave"
+gem "mini_magick"
+gem "fog"
 
 group :development, :test do
   gem "byebug", platform: :mri
