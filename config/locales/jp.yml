@@ -29,11 +29,17 @@ jp:
   profile: "個人のページ"
   display: "現す"
   records: "文書"
+  delete: "削除"
   time:
     formats:
       date_format: "%m - %d - %Y"
       date_time: "%m/%d/%Y %H:%M"
   textarea: "説明"
+  language: "言語"
+  time:
+    formats:
+      date_format: "%m - %d - %Y"
+      date_time: "%m/%d/%Y %H:%M"
   activerecord:
     attributes:
       suggest:
@@ -85,10 +91,6 @@ jp:
         edit: "編集"
         delete: "削除"
       create:
-        create_success: "カテゴリの成功を作成する"
-        create_fail: "カテゴリの作成に失敗する"
-      parent_category:
-        none: "なし"
         create_success: "カテゴリを正常に作成する"
         create_fail: "カテゴリの作成に失敗しました"
       parent_category:
@@ -106,3 +108,39 @@ jp:
       create:
         product_created: "製品を正常に追加する"
         fail_to_create: "製品の作成に失敗する"
+    users:
+      index:
+        title: "ユーザーリスト"
+        name_or_email: "名前またはメールが含まれています"
+        number: "索引"
+        name: "フルネーム"
+        email: "Eメール"
+        sign_in_count: "サインインカウント"
+        created_at: "〜で作成された"
+        option: "オプション"
+      destroy:
+        success: "ユーザーを削除しました!"
+        danger: "ユーザーを破壊しない!"
+      user:
+        sure: "このアカウントのアクセス許可を変更してもよろしいですか？"
+        sure_delete: "このアカウントを削除してもよろしいですか？"
+      update:
+        profile: "正常に更新されたロール！"
+        update_fail: "役割を更新できません！"
+  datetime:
+    distance_in_words:
+      x_days:
+        one: "1日前"
+        other: "%{count}日前"
+      x_minutes:
+        one: "1分前"
+        other: "%{count}分前"
+      about_x_hours:
+        one: "約1時間前"
+        other: "約%{count}時間前"
+      less_than_x_minutes:
+        one: "1分未満前"
+        other: "%{count}分未満前"
+  views:
+    pagination:
+      truncate: "..."

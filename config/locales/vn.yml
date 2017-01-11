@@ -29,11 +29,15 @@ vn:
   profile: "Trang cá nhân"
   display: "Hiển thị"
   records: "bản ghi"
+  language: "Ngôn ngữ"
+  textarea: "Mô tả"
+  change_admin: "Đang là tài khoản thường. Chuyển thành quản trị viên?"
+  change_user: "Đang là tài khoản admin. Giáng cấp thành người dùng?"
+  delete: "Xóa"
   time:
     formats:
-      date_format: "%m - %d - %Y"
-      date_time: "%m/%d/%Y %H:%M"
-  textarea: "Mô tả"
+      date_format: "%d - %m - %Y"
+      date_time: "%d/%m/%Y %H:%M"
   activerecord:
     attributes:
       suggest:
@@ -109,6 +113,25 @@ vn:
       create:
         product_created: "thêm mới một sản phẩm thành công"
         fail_to_create: "lỗi khi thêm mới một sản phẩm"
+    users:
+      index:
+        title: "Danh sách thành viên"
+        name_or_email: "Tìm kiếm theo họ tên hoặc email"
+        number: "STT"
+        name: "Họ tên"
+        email: "Email"
+        sign_in_count: "Lần đăng nhập"
+        created_at: "Tham gia ngày"
+        option: "Thao tác"
+      destroy:
+        success: "Xóa người dùng thành công!"
+        danger: "Xóa người dùng thất bại"
+      update:
+        profile: "Cập nhật quyền truy cập thành công!"
+        update_fail: "Thất bại trong việc cập nhật quyền truy cập!"
+      user:
+        sure: "Bạn có muốn đổi quyền cho tài khoản này không?"
+        sure_delete: "Bạn có muốn xóa tài khoản này không?"
   datetime:
     distance_in_words:
       x_days:

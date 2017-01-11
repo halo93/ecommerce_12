@@ -31,7 +31,9 @@
           </a>
         </li>
         <li class="tab-nav">
-          <a class="dropdown-button" data-activates="dropdown1">
+          <a class="dropdown-button tooltipped"
+            data-position="bottom" data-activates="dropdown1"
+            data-tooltip="<%= t "language" %>">
             <i class="material-icons right">language</i>
           </a>
         </li>
@@ -53,8 +55,9 @@
       </div>
     </li>
     <li>
-      <a class="grey white-text darken-3 waves-effect waves-grey">
-        <i class="material-icons deep-orange-text">airplay</i>
+      <a class="waves-effect waves-grey <%= active_class_admin admin_root_path %>"
+        href="<%= admin_root_path %>">
+        <i class="material-icons <%= active_icon_admin admin_root_path %>">airplay</i>
         <span><%= t".dashboard" %></span>
       </a>
     </li>
@@ -76,11 +79,14 @@
         <%= t".product" %>
       </a>
     </li>
-    <li>
-      <a class="waves-effect waves-grey">
-        <i class="material-icons">perm_identity</i>
+    <li class="">
+      <%= link_to admin_users_path,
+        class: "waves-effect waves-grey #{active_class_admin admin_users_path}" do %>
+        <i class="material-icons <%= active_icon_admin admin_users_path %>">
+          perm_identity
+        </i>
         <%= t".users" %>
-      </a>
+      <% end %>
     </li>
     <li>
       <a class="waves-effect waves-grey">

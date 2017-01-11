@@ -13,7 +13,9 @@
     <% end %>
   </div>
 </div>
-<div class="row">
+<div class="row" id="suggests">
   <%= render @suggests %>
 </div>
-<%= paginate @suggests %>
+<div id="paginator">
+  <%= paginate @suggests, remote: true %>
+</div>
