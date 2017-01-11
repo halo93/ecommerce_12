@@ -142,10 +142,6 @@ footer{
   text-align: center;
 }
 
-.admin-panel{
-  padding-left: 240px;
-}
-
 .admin-panel {
   padding-left: 240px;
   padding-top: 10px;
@@ -157,4 +153,8 @@ footer{
 
 .nav-admin {
   background-color: $color-nav-admin;
+}
+
+#main-content {
+  margin-left: 25%;
 }

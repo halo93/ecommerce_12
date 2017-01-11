@@ -87,3 +87,16 @@ en:
         none: "None"
       add_category:
         add: "ADD"
+    products:
+      index:
+        add: "Add"
+        cancel: "Cancel"
+        name: "Name"
+        parent_category: "Parrent category"
+        product_code: "Product Code"
+        image: "Image"
+        price: "Price"
+        in_stock: "In Stock"
+      create:
+        product_created: "Add products successfully"
+        fail_to_create: "Fail to create products"
