@@ -31,7 +31,7 @@ class ApplicationController < ActionController::Base
   end
 
   def load_all_categories
-    @categories = Category.select :name, :id, :depth
+    @categories = Category.order(:lft).select :name, :id, :depth
   end
 
   def new_suggestion

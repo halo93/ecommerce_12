@@ -1,0 +1,38 @@
+<%= form_for [:admin, @product], id: "add-category-form" do |f| %>
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div>
+        <label><%= t".parent_category" %></label>
+        <%= f.select :category_id, options_for_select(@categories.collect {
+          |cate| ["#{'-' * cate.depth} #{cate.name}", cate.id]}), {} ,
+          {class: "select", id: "parent_category"} %>
+      </div>
+      <div>
+        <label><%= t ".product_code" %></label>
+        <%= f.text_field :product_code %>
+      </div>
+      <div>
+        <label><%= t ".name" %></label>
+        <%= f.text_field :name %>
+      </div>
+      <div>
+        <label><%= t ".image" %></label><br>
+        <%= f.file_field :image , multipart: true %>
+      </div>
+      <div>
+        <label><%= t ".price" %></label>
+        <%= f.number_field :price %>
+      </div>
+      <div>
+        <label><%= t ".in_stock" %></label>
+        <%= f.number_field :in_stock %>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-action modal-close waves-effect waves-green btn-flat" data-dismiss="modal">
+      <%= t ".cancel" %>
+      <button class="modal-action modal-close waves-effect waves-green btn-flat">
+      <%= f.submit t(".add")%>
+    </div>
+  </div>
+<% end %>

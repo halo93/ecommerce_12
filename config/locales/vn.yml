@@ -103,6 +103,16 @@ vn:
     products:
       index:
         add: "thêm"
+        number: "STT"
+        cate_name: "tên danh mục"
+        name: "tên sản phẩm"
+        price: "đơn giá"
+        in_stock: "hàng trong kho"
+        action: "tùy chọn"
+      product:
+        not_available: "hết hàng"
+      form:
+        add: "thêm"
         cancel: "hủy bỏ"
         name: "tên"
         parent_category: "thể loại"

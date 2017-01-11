@@ -1,0 +1,29 @@
+<tr>
+  <% if product.category.depth == 0 %>
+    <td class="center-align">
+      <%= index_for product_counter, @products.current_page, params[:limit].to_i %>
+    </td>
+    <td class="center-align"><%= product.category.name %></td>
+  <% else %>
+    <td></td>
+    <td class="center-align">
+      <%= "-.-" * product.category.depth %><%= product.category.name %></td>
+  <% end %>
+  <td class="center-align"><%= product.name %></td>
+  <td class="center-align"><%= product.price %></td>
+  <td class="center-align">
+    <%= product.in_stock > 0 ? product.in_stock : t(".not_available") %>
+  </td>
+  <td class="center-align">
+    <%= link_to "#",
+      class: "btn-flat waves-effect waves-teal tooltipped",
+      data: {tooltip: I18n.t("admin.categories.index.edit")}, id: product.id do %>
+      <i class="material-icons">mode_edit</i>
+      <% end %>
+    <%= link_to "#", class: "btn-flat waves-effect waves-teal tooltipped",
+      id: product.id, data: {tooltip: I18n.t("admin.categories.index.delete")},
+      remote: true do %>
+      <i class="material-icons">delete</i>
+      <% end %>
+  </td>
+</tr>
