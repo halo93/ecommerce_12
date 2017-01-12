@@ -39,6 +39,7 @@ gem "ffaker"
 gem "carrierwave"
 gem "mini_magick"
 gem "fog"
+gem "friendly_id"
 
 group :development, :test do
   gem "byebug", platform: :mri

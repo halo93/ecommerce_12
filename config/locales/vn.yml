@@ -97,6 +97,7 @@ vn:
         created_at: "ngày tạo"
         option: "lựa chọn"
         edit: "sửa"
+        view: "chi tiết"
         delete: "xóa"
       create:
         create_success: "Thêm danh mục thành công"
@@ -126,6 +127,13 @@ vn:
       create:
         product_created: "thêm mới một sản phẩm thành công"
         fail_to_create: "lỗi khi thêm mới một sản phẩm"
+      show:
+        detail_product: "chi tiết sản phẩm"
+        category: "danh mục"
+        product_name: "tên sản phẩm"
+        price: "giá"
+        in_stock: "kho hàng"
+        thumbnail: "ảnh xem trước"
     users:
       index:
         title: "Danh sách thành viên"

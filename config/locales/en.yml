@@ -87,6 +87,7 @@ en:
         description: "Description"
         parent_category: "Parrent category"
         edit: "Edit"
+        view: "View"
         delete: "Delete"
       create:
         create_success: "Create category success"
@@ -118,6 +119,13 @@ en:
       create:
         product_created: "Add products successfully"
         fail_to_create: "Fail to create products"
+      show:
+        detail_product: "Detail Product"
+        category: "Category"
+        product_name: "Product name"
+        price: "Price"
+        in_stock: "In stock"
+        thumbnail: "Thumbnail"
     users:
       index:
         title: "Users list"

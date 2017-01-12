@@ -20,6 +20,11 @@
       data: {tooltip: I18n.t("admin.categories.index.edit")}, id: product.id do %>
       <i class="material-icons">mode_edit</i>
       <% end %>
+    <%= link_to admin_product_path(product),
+      class: "btn-flat waves-effect waves-teal tooltipped",
+      id: product.id, data: {tooltip: I18n.t("admin.categories.index.view")} do %>
+      <i class="material-icons">visibility</i>
+      <% end %>
     <%= link_to "#", class: "btn-flat waves-effect waves-teal tooltipped",
       id: product.id, data: {tooltip: I18n.t("admin.categories.index.delete")},
       remote: true do %>

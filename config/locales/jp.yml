@@ -92,6 +92,7 @@ jp:
         created_at: "〜で作成された"
         option: "オプション"
         edit: "編集"
+        view: "見る"
         delete: "削除"
       create:
         create_success: "カテゴリを正常に作成する"
@@ -119,6 +120,13 @@ jp:
       create:
         product_created: "製品を正常に追加する"
         fail_to_create: "製品の作成に失敗する"
+      show:
+        detail_product: "詳細な製品"
+        category: "カテゴリー"
+        product_name: "商品名"
+        price: "価格"
+        in_stock: "株式"
+        thumbnail: "サムネイル"
     users:
       index:
         title: "ユーザーリスト"
