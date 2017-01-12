@@ -1,5 +1,5 @@
 class Admin::ProductsController < ApplicationController
-  load_and_authorize_resource except: :create
+  load_and_authorize_resource except: :create, find_by: :slug
   before_action :authenticate_user!, :verify_admin, :load_all_categories
   layout "admin"
 
@@ -7,6 +7,9 @@ class Admin::ProductsController < ApplicationController
     @product = Product.new
     @products = Product.includes(:category).in_category(params[:category_id])
       .page(params[:page]).per params[:limit]
+  end
+
+  def show
   end
 
   def create
