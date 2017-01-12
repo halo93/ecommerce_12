@@ -12,4 +12,10 @@ class Product < ApplicationRecord
   validates :product_code, presence: true, length: {maximum: 10}
   validates :price, presence: true
   validates :in_stock, presence: true
+
+  delegate :name, :depth, to: :category, prefix: true
+
+  scope :in_category, ->category_id{
+    where category_id: category_id if category_id.present?
+  }
 end

@@ -5,6 +5,8 @@ class Admin::ProductsController < ApplicationController
 
   def index
     @product = Product.new
+    @products = Product.includes(:category).in_category(params[:category_id])
+      .page(params[:page]).per params[:limit]
   end
 
   def create

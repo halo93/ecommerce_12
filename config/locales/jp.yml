@@ -93,10 +93,18 @@ jp:
       create:
         create_success: "カテゴリを正常に作成する"
         create_fail: "カテゴリの作成に失敗しました"
-      parent_category:
-        none: "なし"
     products:
       index:
+        add: "追加する"
+        number: "番号"
+        cate_name: "カテゴリ名"
+        name: "名"
+        price: "価格"
+        in_stock: "株式"
+        action: "アクション"
+      product:
+        not_available: "利用不可"
+      form:
         add: "追加する"
         cancel: "キャンセル"
         name: "名"
