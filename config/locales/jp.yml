@@ -30,6 +30,9 @@ jp:
   display: "現す"
   records: "文書"
   delete: "削除"
+  processing: "処理"
+  accepted: "受け入れられた"
+  rejected: "拒否された"
   time:
     formats:
       date_format: "%m - %d - %Y"
@@ -135,6 +138,11 @@ jp:
       update:
         profile: "正常に更新されたロール！"
         update_fail: "役割を更新できません！"
+    suggests:
+      index:
+        title: "リストを提案する"
+        name_or_content: "タイトルまたは内容が含まれています"
+        search: "サーチ"
   datetime:
     distance_in_words:
       x_days:

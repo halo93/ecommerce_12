@@ -24,11 +24,6 @@ class SuggestsController < ApplicationController
   end
 
   private
-  def load_suggested_product
-    @suggest = Suggest.find_by id: params[:id]
-    @suggest ? @suggest : render_404
-  end
-
   def suggest_params
     params.require(:suggest).permit :title, :content, :category_id
   end

@@ -34,6 +34,9 @@ vn:
   change_admin: "Đang là tài khoản thường. Chuyển thành quản trị viên?"
   change_user: "Đang là tài khoản admin. Giáng cấp thành người dùng?"
   delete: "Xóa"
+  processing: "Chuyển về đang xử lý"
+  accepted: "Đồng ý"
+  rejected: "Từ chối"
   time:
     formats:
       date_format: "%d - %m - %Y"
@@ -142,6 +145,11 @@ vn:
       user:
         sure: "Bạn có muốn đổi quyền cho tài khoản này không?"
         sure_delete: "Bạn có muốn xóa tài khoản này không?"
+    suggests:
+      index:
+        title: "Danh sách gợi ý"
+        name_or_content: "Tên hoặc nội dung có chứa"
+        search: "Tìm kiếm"
   datetime:
     distance_in_words:
       x_days:
