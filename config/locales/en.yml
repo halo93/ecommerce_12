@@ -33,6 +33,9 @@ en:
   change_admin: "Current Role: User. Change to Admin?"
   change_user: "Current Role: Admin. Change to User?"
   delete: "Delete"
+  processing: "Move to processing"
+  accepted: "Accept"
+  rejected: "Reject"
   time:
     formats:
       date_format: "%m - %d - %Y"
@@ -128,3 +131,9 @@ en:
       update:
         profile: "Successfully updated role!"
         update_fail: "Fail to update role!"
+    suggests:
+      index:
+        title: "Suggests list"
+        name_or_content: "Title or Content contains"
+        search: "Search"
+

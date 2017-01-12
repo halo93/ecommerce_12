@@ -79,7 +79,7 @@
         <%= t".product" %>
       </a>
     </li>
-    <li class="">
+    <li>
       <%= link_to admin_users_path,
         class: "waves-effect waves-grey #{active_class_admin admin_users_path}" do %>
         <i class="material-icons <%= active_icon_admin admin_users_path %>">
@@ -89,10 +89,13 @@
       <% end %>
     </li>
     <li>
-      <a class="waves-effect waves-grey">
-        <i class="material-icons">storage</i>
+      <%= link_to admin_suggests_path,
+        class: "waves-effect waves-grey #{active_class_admin admin_suggests_path}" do %>
+        <i class="material-icons <%= active_icon_admin admin_suggests_path %>">
+          feedback
+        </i>
         <%= t".suggest" %>
-      </a>
+      <% end %>
     </li>
   </ul>
   </div>

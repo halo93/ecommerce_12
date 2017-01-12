@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :categories
       resources :products
       resources :users
+      resources :suggests
     end
     get "/pages/*page" => "pages#show"
     root "pages#home"

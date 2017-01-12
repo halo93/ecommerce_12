@@ -48,6 +48,11 @@ class ApplicationController < ActionController::Base
       :role
   end
 
+  def load_suggested_product
+    @suggest = Suggest.find_by id: params[:id]
+    @suggest ? @suggest : render_404
+  end
+
   protected
   def configure_permitted_parameters
     attrs = [:name, :email, :password, :current_password]

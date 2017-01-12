@@ -1,0 +1,69 @@
+<div class="col s12 m12">
+  <div class="card blue-grey darken-1 hoverable">
+    <div class="card-content white-text">
+      <span class="card-title">
+        <%= suggest.title %>
+      </span>
+      <br>
+      <span class="label name-suggest">
+        <i class="material-icons">face</i>
+        <%= suggest.user.name %>
+      </span>
+      <% if suggest.processing? %>
+        <span class="right white-text badge red">
+          <%= Suggest.human_enum_name :status, suggest.status %>
+        </span>
+        <%= link_to admin_suggest_path(suggest, status: :accepted),
+          class: "btn-flat waves-effect waves-teal tooltipped green",
+          data: {tooltip: I18n.t(".accept"), confirm: t(".sure")},
+          method: :put do %>
+          <i class="material-icons white-text">done</i>
+        <% end %>
+        <%= link_to admin_suggest_path(suggest, status: :rejected),
+          class: "btn-flat waves-effect waves-teal tooltipped red",
+          data: {tooltip: I18n.t(".rejected"), confirm: t(".sure")},
+          method: :put do %>
+          <i class="material-icons white-text">clear</i>
+        <% end %>
+      <% elsif suggest.accepted? %>
+        <span class="right white-text badge red">
+          <%= Suggest.human_enum_name :status, suggest.status %>
+        </span>
+        <%= link_to admin_suggest_path(suggest, status: :processing),
+          class: "btn-flat waves-effect waves-teal tooltipped",
+          data: {tooltip: I18n.t(".processing"), confirm: t(".sure")},
+          method: :put do %>
+          <i class="material-icons deep-orange-text">show_chart</i>
+        <% end %>
+        <%= link_to admin_suggest_path(suggest, status: :rejected),
+          class: "btn-flat waves-effect waves-teal tooltipped red",
+          data: {tooltip: I18n.t(".rejected"), confirm: t(".sure")},
+          method: :put do %>
+          <i class="material-icons white-text">clear</i>
+        <% end %>
+      <% elsif suggest.rejected? %>
+        <span class="right white-text badge red">
+          <%= Suggest.human_enum_name :status, suggest.status %>
+        </span>
+        <%= link_to admin_suggest_path(suggest, status: :processing),
+          class: "btn-flat waves-effect waves-teal tooltipped",
+          data: {tooltip: I18n.t(".processing"), confirm: t(".sure")},
+          method: :put do %>
+          <i class="material-icons deep-orange-text">show_chart</i>
+        <% end %>
+        <%= link_to admin_suggest_path(suggest, status: :accepted),
+          class: "btn-flat waves-effect waves-teal tooltipped green",
+          data: {tooltip: I18n.t(".accepted"), confirm: t(".sure")},
+          method: :put do %>
+          <i class="material-icons white-text">done</i>
+        <% end %>
+      <% end %>
+      <p><%= suggest.content %></p>
+    </div>
+    <div class="card-action center">
+      <a href="#"><i class="material-icons">alarm</i>
+        <%= time_ago_in_words suggest.created_at %>
+      </a>
+    </div>
+  </div>
+</div>

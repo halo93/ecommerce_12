@@ -1,0 +1,2 @@
+$('#suggests').html('<%= escape_javascript render @suggests %>');
+$('#paginator').html('<%= escape_javascript paginate(@suggests, remote: true).to_s %>');
