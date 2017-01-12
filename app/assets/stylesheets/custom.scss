@@ -145,6 +145,7 @@ footer{
 .admin-panel {
   padding-left: 240px;
   padding-top: 10px;
+  padding-bottom: 100px;
 }
 
 .button-submit {
@@ -155,6 +156,6 @@ footer{
   background-color: $color-nav-admin;
 }
 
-#main-content {
-  margin-left: 25%;
+#show-limit{
+  width: 50%
 }

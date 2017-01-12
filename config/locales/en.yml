@@ -29,6 +29,10 @@ en:
   profile: "Profile"
   display: "Display"
   records: "record(s)"
+  language: "Language"
+  change_admin: "Current Role: User. Change to Admin?"
+  change_user: "Current Role: Admin. Change to User?"
+  delete: "Delete"
   time:
     formats:
       date_format: "%m - %d - %Y"
@@ -80,6 +84,7 @@ en:
         description: "Description"
         parent_category: "Parrent category"
         edit: "Edit"
+        delete: "Delete"
       create:
         create_success: "Create category success"
         create_fail: "Create category fail"
@@ -100,3 +105,16 @@ en:
       create:
         product_created: "Add products successfully"
         fail_to_create: "Fail to create products"
+    users:
+      index:
+        title: "Users list"
+        name_or_email: "Name or Email contains"
+      destroy:
+        success: "Successfully deleted user!"
+        danger: "Fail to destroy user!"
+      user:
+        sure: "Are you sure you want to change permission for this account?"
+        sure_delete: "Are you sure to delete this account?"
+      update:
+        profile: "Successfully updated role!"
+        update_fail: "Fail to update role!"

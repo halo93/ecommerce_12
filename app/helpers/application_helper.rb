@@ -12,8 +12,16 @@ module ApplicationHelper
     current_page?(link_path) ? "active" : ""
   end
 
+  def active_class_admin link_path
+    current_page?(link_path) ? "grey white-text darken-3" : ""
+  end
+
   def active_class_locale locale
     locale == I18n.locale ? "active" : ""
+  end
+
+  def active_icon_admin link_path
+    current_page?(link_path) ? "deep-orange-text" : ""
   end
 
   def index_for counter, page, per_page

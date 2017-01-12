@@ -38,6 +38,16 @@ class ApplicationController < ActionController::Base
     @suggest = Suggest.new
   end
 
+  def load_user
+    @user = User.find_by id: params[:id]
+    render_404 unless @user
+  end
+
+  def load_all_users
+    @users = User.select :name, :email, :avatar, :created_at, :sign_in_count,
+      :role
+  end
+
   protected
   def configure_permitted_parameters
     attrs = [:name, :email, :password, :current_password]
