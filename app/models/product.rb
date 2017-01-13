@@ -18,9 +18,8 @@ class Product < ApplicationRecord
 
   delegate :name, :depth, to: :category, prefix: true
 
-  scope :in_category, ->category_id{
-    where category_id: category_id if category_id.present?
-  }
+  scope :in_category,
+    ->category_id{where category_id: category_id if category_id.present?}
 
   def should_generate_new_friendly_id?
     name_changed? || super

@@ -9,7 +9,7 @@ class Admin::UsersController < ApplicationController
     @search = User.ransack params[:q]
     @q = User.search params[:q]
     @users = @q.result(distinct: true)
-      .order_by_creation_time.page(params[:page]).per params[:limit]
+      .order_by_creation_time.page(params[:page]).per params[:limit].to_i
   end
 
   def edit

@@ -13,7 +13,10 @@
       <main class="admin-panel">
         <div class="container" id="main-content">
           <% flash.each do |message_type, message| %>
-            <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+            <%= javascript_tag do %>
+              <%= render(partial: "shared/error_messages", formats: [:js],
+                locals:{message_type: message_type, message: message}) %>
+            <% end %>
           <% end %>
           <%= yield %>
         </div>

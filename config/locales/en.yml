@@ -81,9 +81,11 @@ en:
   admin:
     categories:
       index:
+        title: "Categories list"
         add: "Add"
         cancel: "Cancel"
         name: "Name"
+        name_contains: "Name contains"
         description: "Description"
         parent_category: "Parrent category"
         edit: "Edit"
@@ -96,6 +98,22 @@ en:
         none: "None"
       add_category:
         add: "ADD"
+        cancel: "CANCEL"
+        parrent_category: "Parent category"
+        name: "Name"
+        description: "Description"
+        name_required: "Category name is required"
+      edit_category:
+        edit: "EDIT"
+        cancel: "CANCEL"
+      destroy:
+        must_be_leaf: "Cannot delete category: This category contains sub categories"
+        notice_message: "Cannot delete category: This category contains product(s)"
+        delete_success: "Successfully deleted category"
+        delete_fail: "Fail to delete category"
+      update:
+        update_fail: "Fail to update category"
+        update_success: "Successfully updated category"
     products:
       index:
         add: "Add"

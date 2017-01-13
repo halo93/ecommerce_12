@@ -9,7 +9,7 @@ class Admin::SuggestsController < ApplicationController
     @search = Suggest.ransack params[:q]
     @q = Suggest.search params[:q]
     @suggests = @q.result(distinct: true)
-      .order_by_creation_time.page(params[:page]).per params[:limit]
+      .order_by_creation_time.page(params[:page]).per params[:limit].to_i
   end
 
   def update

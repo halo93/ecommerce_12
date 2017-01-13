@@ -1,0 +1,10 @@
+switch('<%= message_type %>'){
+  case 'success':
+    Materialize.toast('<%= message %>', 4000, 'green');
+    break;
+  case 'danger':
+    Materialize.toast('<%= message %>', 4000, 'red');
+    break;
+  default:
+    break;
+}

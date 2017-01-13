@@ -21,3 +21,22 @@ user = User.find 3
     user_id: user.id,
     category_id: nil
 end
+
+Category.create name: "Valentine Giftbox",
+  description: "This is valentine giftbox", depth: 0, lft: 1, rgt: 6
+Category.create name: "Giftbox for lover",
+  description: "This is Giftbox for lover", depth: 1, lft: 2, rgt: 3
+Category.create name: "Giftbox for parents",
+  description: "This is Giftbox for parents", depth: 1, lft: 4, rgt: 5
+Category.create name: "New Year Giftbox",
+  description: "This is New Year Giftbox", depth: 0, lft: 7, rgt: 18
+Category.create name: "Giftbox for parents-in-law",
+  description: "This is Giftbox for parents-in-law", depth: 1, lft: 8, rgt: 9
+Category.create name: "Giftbox for boss",
+  description: "This is Giftbox for boss", depth: 1, lft: 10, rgt: 11
+Category.create name: "Giftbox for pet",
+  description: "This is Giftbox for pet", depth: 1, lft: 12, rgt: 13
+Category.create name: "Giftbox for grandparents",
+  description: "This is Giftbox for grandparents", depth: 1, lft: 14, rgt: 15
+Category.create name: "Giftbox for friend",
+  description: "This is Giftbox for friend", depth: 1, lft: 16, rgt: 17

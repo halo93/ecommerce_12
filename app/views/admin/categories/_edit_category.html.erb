@@ -1,0 +1,26 @@
+<div id="modal2-<%= category.id %>" class="modal">
+  <div class="modal-content">
+    <%= form_tag admin_category_path(category), method: :put,
+      id: "edit-category-form" do %>
+      <%= hidden_field_tag "id", category.id %>
+      <div>
+        <label><%= t ".name" %></label>
+        <%= text_field_tag :name, params[:name],
+          class: "input-field", value: category.name %>
+      </div>
+      <div>
+        <label for="#description"><%= t ".description" %></label>
+        <%= text_area_tag :description, category.description,
+          class: "materialize-textarea" %>
+      </div>
+  </div>
+  <div class="modal-footer">
+    <a class="modal-action modal-close waves-effect waves-green btn-flat">
+      <%= t ".cancel" %>
+    </a>
+    <button class="modal-action modal-close waves-effect waves-green btn-flat button-submit">
+      <%= submit_tag t(".edit") %>
+    </button>
+  </div>
+    <% end %>
+</div>

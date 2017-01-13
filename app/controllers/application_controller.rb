@@ -53,6 +53,21 @@ class ApplicationController < ActionController::Base
     @suggest ? @suggest : render_404
   end
 
+  def category_tree categories, left = 0, right = nil, depth = -1
+    categories.each do |category|
+      next unless category.lft > left && (right.nil? || category.rgt <
+        right) && category.depth == depth + 1
+      @categories_tree.push(category)
+      categories_temp = categories.compact
+      categories_temp.delete category
+      if category.rgt != (category.lft + 1)
+        category_tree categories_temp, category.lft,
+          category.rgt, category.depth
+      end
+    end
+    @categories_tree
+  end
+
   protected
   def configure_permitted_parameters
     attrs = [:name, :email, :password, :current_password]

@@ -1,29 +1,32 @@
-  <%= form_tag admin_categories_path, method: :post,
-    id: "add-category-form" do %>
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <div>
-          <label><%= t".parrent_category" %></label>
-          <%= select_tag :parent_id, options_for_select(@categories.collect {
-            |cate| ["#{'-' * cate.depth} #{cate.name}", cate.id]}, params[:parent_id]),
-            {class: "select", id: "parent_category", include_blank: t(".none")} %>
-        </div>
-        <div>
-          <label><%= t ".name" %></label>
-          <%= text_field_tag :name, params[:name], class: "form-control" %>
-        </div>
-        <div>
-          <label><%= t ".description" %></label>
-          <%= text_area_tag :description, params[:description],
-            class: "form-control" %>
-       </div>
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <%= form_tag admin_categories_path, method: :post,
+      id: "add-category-form" do %>
+      <div>
+        <label><%= t".parrent_category" %></label>
+        <%= select_tag :parent_id, options_for_select(@categories_tree.collect {
+          |cate| ["#{'-' * cate.depth} #{cate.name}", cate.id]}, params[:parent_id]),
+          {class: "select", id: "parent_category", include_blank: t(".none")} %>
       </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">
-          <%= t ".cancel" %>
-        </a>
-        <button class="modal-action modal-close waves-effect waves-green btn-flat button-submit">
-        <%= submit_tag t(".add")%>
+      <br>
+      <div>
+        <label><%= t ".name" %> *</label>
+        <%= text_field_tag :name, params[:name], class: "input-field",
+        placeholder: t(".name_required") %>
       </div>
-    </div>
+      <div>
+        <label><%= t ".description" %></label>
+        <%= text_area_tag :description, params[:description],
+          class: "materialize-textarea" %>
+      </div>
+  </div>
+  <div class="modal-footer">
+    <a class="modal-action modal-close waves-effect waves-green btn-flat">
+      <%= t ".cancel" %>
+    </a>
+    <button class="modal-action modal-close waves-effect waves-green btn-flat button-submit">
+      <%= submit_tag t(".add") %>
+    </button>
+  </div>
   <% end %>
+</div>
