@@ -4,9 +4,9 @@ class Ability
   def initialize user
     user ||= User.new
     case user.role
-    when :admin
+    when "admin"
       can :manage, :all
-    when :user
+    when "user"
       can :read, [Category, Comment, Product, Coupon, User,
         Rate, Order, OrderDetail, Suggest]
       can :create, [Comment, Suggest, Order, OrderDetail, Rate]

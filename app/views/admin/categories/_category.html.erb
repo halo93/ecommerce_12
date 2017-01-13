@@ -4,16 +4,18 @@
     <%= index_for category_counter, @categories.current_page,
       Settings.show_limit.show_6 %>
     </td>
-    <td><%= category.name %></td>
+    <td class="center-align"><%= category.name %></td>
     <td class="center-align"><%= category.description %></td>
     <td class="center-align"><%= l category.created_at, format: :date_format %></td>
     <td class="center-align">
-      <%= link_to "#",
+      <%= link_to "#modal2-#{category.id}",
         class: "btn-flat waves-effect waves-teal tooltipped",
         data: {tooltip: I18n.t("admin.categories.index.edit")}, id: category.id do %>
         <i class="material-icons">mode_edit</i>
-        <% end %>
-      <%= link_to "#", class: "btn-flat waves-effect waves-teal tooltipped",
+    <% end %>
+      <%= render "edit_category", category: category %>
+      <%= link_to admin_category_path(category.id), method: :delete,
+        class: "btn-flat waves-effect waves-teal tooltipped",
         id: category.id, data: {tooltip: I18n.t("admin.categories.index.delete")},
         remote: true do %>
         <i class="material-icons">delete</i>
@@ -22,16 +24,18 @@
   <% else %>
     <tr>
       <td></td>
-      <td><%= "-.-" * category.depth %><%= category.name %></td>
+      <td class="center-align"><%= "-.-" * category.depth %><%= category.name %></td>
       <td class="center-align"><%= category.description %></td>
       <td class="center-align"><%= l category.created_at, format: :date_format %></td>
       <td class="center-align">
-        <%= link_to "#",
+        <%= link_to "#modal2-#{category.id}",
           class: "btn-flat waves-effect waves-teal tooltipped",
           data: {tooltip: I18n.t("admin.categories.index.edit")}, id: category.id do %>
           <i class="material-icons">mode_edit</i>
           <% end %>
-        <%= link_to "#", class: "btn-flat waves-effect waves-teal tooltipped",
+        <%= render "edit_category", category: category %>
+        <%= link_to admin_category_path(category.id), method: :delete,
+          class: "btn-flat waves-effect waves-teal tooltipped",
           id: category.id, data: {tooltip: I18n.t("admin.categories.index.delete")},
           remote: true do %>
           <i class="material-icons">delete</i>

@@ -4,9 +4,10 @@ class Admin::ProductsController < ApplicationController
   layout "admin"
 
   def index
+    params[:limit] ||= Settings.show_limit.show_6
     @product = Product.new
     @products = Product.includes(:category).in_category(params[:category_id])
-      .page(params[:page]).per params[:limit]
+      .page(params[:page]).per params[:limit].to_i
   end
 
   def show

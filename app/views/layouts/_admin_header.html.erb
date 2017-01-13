@@ -68,10 +68,13 @@
       </a>
     </li>
     <li>
-      <a href= "<%= admin_categories_path %>" class="waves-effect waves-grey">
-        <i class="material-icons">list</i>
+      <%= link_to admin_categories_path,
+        class: "waves-effect waves-grey #{active_class_admin admin_categories_path}" do %>
+        <i class="material-icons <%= active_icon_admin admin_categories_path %>">
+          list
+        </i>
         <%= t".categories" %>
-      </a>
+      <% end %>
     </li>
     <li>
       <a href="<%= admin_products_path %>" class="waves-effect waves-grey">

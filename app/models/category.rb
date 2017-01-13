@@ -23,6 +23,17 @@ class Category < ApplicationRecord
     end
   end
 
+  def delete_category
+    Category.where("rgt >= ?", self.rgt)
+      .update_all("rgt = rgt - 2")
+    Category.where("lft >= ?", self.rgt)
+      .update_all("lft = lft - 2")
+  end
+
+  def is_leaf?
+    self.rgt == self.lft + 1
+  end
+
   private
   def last_right
     Category.maximum(:rgt)

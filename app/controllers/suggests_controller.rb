@@ -6,7 +6,7 @@ class SuggestsController < ApplicationController
     params[:limit] ||= Settings.show_limit.show_6
     @search = current_user.suggests.ransack params[:q]
     @suggests = current_user.suggests.order_by_creation_time
-      .page(params[:page]).per params[:limit]
+      .page(params[:page]).per params[:limit].to_i
   end
 
   def show
