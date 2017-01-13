@@ -4,9 +4,9 @@
       id: "edit-category-form" do %>
       <%= hidden_field_tag "id", category.id %>
       <div>
-        <label><%= t ".name" %></label>
+        <label><%= t ".name" %> *</label>
         <%= text_field_tag :name, params[:name],
-          class: "input-field", value: category.name %>
+          placeholder: t(".name_required"), class: "input-field", value: category.name %>
       </div>
       <div>
         <label for="#description"><%= t ".description" %></label>

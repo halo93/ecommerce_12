@@ -63,7 +63,7 @@
     </li>
     <li>
       <a class="waves-effect waves-grey">
-        <i class="material-icons">reorder</i>
+        <i class="material-icons">assignment</i>
         <span><%= t".order" %></span>
       </a>
     </li>
@@ -78,7 +78,7 @@
     </li>
     <li>
       <a href="<%= admin_products_path %>" class="waves-effect waves-grey">
-        <i class="material-icons">trending_up</i>
+        <i class="material-icons">card_giftcard</i>
         <%= t".product" %>
       </a>
     </li>
@@ -86,7 +86,7 @@
       <%= link_to admin_users_path,
         class: "waves-effect waves-grey #{active_class_admin admin_users_path}" do %>
         <i class="material-icons <%= active_icon_admin admin_users_path %>">
-          perm_identity
+          account_circle
         </i>
         <%= t".users" %>
       <% end %>
@@ -95,7 +95,7 @@
       <%= link_to admin_suggests_path,
         class: "waves-effect waves-grey #{active_class_admin admin_suggests_path}" do %>
         <i class="material-icons <%= active_icon_admin admin_suggests_path %>">
-          feedback
+          add_alert
         </i>
         <%= t".suggest" %>
       <% end %>

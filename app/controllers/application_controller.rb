@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
   before_action :set_locale
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :new_suggestion, :load_all_categories
+  before_action :new_suggestion, :load_categories_tree
 
   rescue_from CanCan::AccessDenied do |_exception|
     redirect_to root_path
@@ -66,6 +66,12 @@ class ApplicationController < ActionController::Base
       end
     end
     @categories_tree
+  end
+
+  def load_categories_tree
+    categories = Category.all
+    @categories_tree = []
+    category_tree categories
   end
 
   protected
