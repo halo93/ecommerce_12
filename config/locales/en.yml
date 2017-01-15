@@ -36,6 +36,7 @@ en:
   processing: "Move to processing"
   accepted: "Accept"
   rejected: "Reject"
+  welcome: "Welcome"
   time:
     formats:
       date_format: "%m - %d - %Y"
@@ -68,9 +69,13 @@ en:
       users: "Users"
       suggest: "Suggests"
       categories: "Categories"
+      edit: "Edit profile"
+      logout: "Logout"
   suggests:
     index:
       title: "Suggests list"
+      search: "Search"
+      name_or_content: "Title or Content contains"
     create:
       danger: "Fail to add a suggest"
       success: "Successfully added a new suggest"
@@ -116,6 +121,8 @@ en:
       update:
         update_fail: "Fail to update category"
         update_success: "Successfully updated category"
+      category:
+        sure_delete: "Are you sure you want to delete this category?"
     products:
       index:
         add: "Add"

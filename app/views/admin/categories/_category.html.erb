@@ -36,7 +36,9 @@
         <%= render "edit_category", category: category %>
         <%= link_to admin_category_path(category.id), method: :delete,
           class: "btn-flat waves-effect waves-teal tooltipped",
-          id: category.id, data: {tooltip: I18n.t("admin.categories.index.delete")},
+          id: category.id,
+          data: {tooltip: I18n.t("admin.categories.index.delete"),
+          confirm: t(".sure_delete")},
           remote: true do %>
           <i class="material-icons">delete</i>
           <% end %>

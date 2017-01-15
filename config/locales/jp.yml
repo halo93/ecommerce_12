@@ -33,6 +33,7 @@ jp:
   processing: "処理"
   accepted: "受け入れられた"
   rejected: "拒否された"
+  welcome: "ようこそ"
   time:
     formats:
       date_format: "%m - %d - %Y"
@@ -70,9 +71,13 @@ jp:
       users: "ユーザー管理"
       suggest: "管理を提案する"
       categories: "カテゴリ管理"
+      edit: "プロファイル編集"
+      logout: "ログアウト"
   suggests:
     index:
       title: "リストを提案する"
+      search: "サーチ"
+      name_or_content: "タイトルまたは内容が含まれています"
     create:
       danger: "提案を追加しない"
       success: "新しい提案を正常に追加しました"
@@ -120,6 +125,8 @@ jp:
       update:
         update_fail: "カテゴリの更新に失敗しました"
         update_success: "正常に更新されたカテゴリ"
+      category:
+        sure_delete: "このカテゴリを削除してもよろしいですか？"
     products:
       index:
         add: "追加する"

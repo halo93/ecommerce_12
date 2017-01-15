@@ -1,16 +1,29 @@
 <% provide :title, t(".title") %>
-<h2 class="center"><i class="material-icons">feedback</i><%= t ".title" %></h2>
+<h2 class="center"><i class="material-icons small">add_alert</i> <%= t ".title" %></h2>
 <div class="row">
-  <div class="col s12 m4">
+  <div class="col s12 m2">
     <%= search_form_for @search, url: suggests_path do |f|%>
-      <span><%= t "display" %></span>
+      <label><%= t "display" %></label>
       <%= select_tag :limit,
         options_from_collection_for_select(Settings.show_limit,
         :second, :second, selected: params[:limit] || Settings.show_limit.limit),
         id: "show-limit", style: "display: block" %>
-      <%= f.submit "search", style: "display: none" %>
-      <span><%= t "records" %></span>
+      <%= f.submit "", style: "display: none" %>
+      <label><%= t "records" %></label>
     <% end %>
+  </div>
+  <div class="col s12 m10 right">
+    <div class="inline">
+      <%= search_form_for @q, url: suggests_path do |f| %>
+        <%= f.label :title_or_content_cont, t(".name_or_content") %>
+        <%= f.text_field :title_or_content_cont %>
+        <%= f.select :status_eq,
+          Suggest.statuses.to_a.map{|m| [m[0].humanize, m[1]]},
+          {include_blank: t(".select-status")},
+          {class: "select-status input-field", autofocus: true} %>
+        <%= f.submit t(".search"), class: "waves-effect waves-light btn right" %>
+      <% end %>
+    </div>
   </div>
 </div>
 <div class="row" id="suggests">

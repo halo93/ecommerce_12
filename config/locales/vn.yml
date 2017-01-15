@@ -37,6 +37,7 @@ vn:
   processing: "Chuyển về đang xử lý"
   accepted: "Đồng ý"
   rejected: "Từ chối"
+  welcome: "Xin chào"
   time:
     formats:
       date_format: "%d - %m - %Y"
@@ -68,9 +69,13 @@ vn:
       users: "Quản lý người dùng"
       suggest: "Quản lý gợi ý"
       categories: "Quản lý danh mục"
+      edit: "Chỉnh sửa thông tin"
+      logout: "Đăng xuất"
   suggests:
     index:
       title: "Danh sách gợi ý"
+      search: "Tìm kiếm"
+      name_or_content: "Tiêu đề hoặc nội dung có chứa"
     create:
       danger: "Thêm gợi ý thất bại"
       success: "Thêm gợi ý thành công"
@@ -126,6 +131,8 @@ vn:
       update:
         update_fail: "Cập nhật danh mục thất bại"
         update_success: "Cập nhật danh mục thành công"
+      category:
+        sure_delete: "Bạn có muốn xóa danh mục này không?"
     products:
       index:
         add: "thêm"

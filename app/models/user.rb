@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  mount_uploader :avatar, ImageUploader
   devise :omniauthable, :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
   has_many :rates

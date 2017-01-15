@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :new_suggestion, :load_categories_tree
+  layout :layout_by_resource
 
   rescue_from CanCan::AccessDenied do |_exception|
     redirect_to root_path
@@ -76,7 +77,17 @@ class ApplicationController < ActionController::Base
 
   protected
   def configure_permitted_parameters
-    attrs = [:name, :email, :password, :current_password]
+    attrs = [:name, :email, :password, :current_password, :avatar]
     devise_parameter_sanitizer.permit :account_update, keys: attrs
+    devise_parameter_sanitizer.permit :sign_up, keys: attrs
+  end
+
+  def layout_by_resource
+    if devise_controller? && resource_name == :user &&
+      (action_name == "edit" || action_name == "update")
+      "admin"
+    else
+      "application"
+    end
   end
 end
