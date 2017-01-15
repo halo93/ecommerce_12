@@ -1,5 +1,5 @@
 <% provide :title, t(".title") %>
-<h2 class="center"><i class="material-icons">feedback</i><%= t ".title" %></h2>
+<h2 class="center"><i class="material-icons small">add_alert</i> <%= t ".title" %></h2>
 <div class="row">
   <div class="col s12 m2">
     <label><%= t "display" %></label>
@@ -18,7 +18,7 @@
         <%= f.label :title_or_content_cont, t(".name_or_content") %>
         <%= f.text_field :title_or_content_cont %>
         <%= f.select :status_eq,
-          options_for_select(Suggest.statuses.to_a.map{|m| [m[0].humanize, m[1]]}),
+          Suggest.statuses.to_a.map{|m| [m[0].humanize, m[1]]},
           {include_blank: t(".select-status")},
           {class: "select-status input-field", autofocus: true} %>
         <%= f.submit t(".search"), class: "waves-effect waves-light btn right" %>

@@ -1,9 +1,15 @@
 switch('<%= message_type %>'){
   case 'success':
-    Materialize.toast('<%= message %>', 4000, 'green');
+    Materialize.toast(
+      '<i class="material-icons">sentiment_very_satisfied</i>&nbsp&nbsp<%= message %>', 4000,
+      'green rounded'
+    );
     break;
   case 'danger':
-    Materialize.toast('<%= message %>', 4000, 'red');
+    Materialize.toast(
+      '<i class="material-icons">sentiment_very_dissatisfied</i>&nbsp&nbsp<%= message %>', 4000,
+      'red rounded'
+    );
     break;
   default:
     break;

@@ -81,8 +81,9 @@ en:
   admin:
     categories:
       index:
+        press_enter: "Press enter to search"
         title: "Categories list"
-        add: "Add"
+        add: "Add Category"
         cancel: "Cancel"
         name: "Name"
         name_contains: "Name contains"
@@ -106,6 +107,7 @@ en:
       edit_category:
         edit: "EDIT"
         cancel: "CANCEL"
+        name_required: "Category name is required"
       destroy:
         must_be_leaf: "Cannot delete category: This category contains sub categories"
         notice_message: "Cannot delete category: This category contains product(s)"

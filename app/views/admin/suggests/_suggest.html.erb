@@ -15,13 +15,13 @@
         </span>
         <%= link_to admin_suggest_path(suggest, status: :accepted),
           class: "btn-flat waves-effect waves-teal tooltipped green",
-          data: {tooltip: I18n.t(".accept"), confirm: t(".sure")},
+          data: {tooltip: I18n.t("accepted"), confirm: t(".sure")},
           method: :put do %>
           <i class="material-icons white-text">done</i>
         <% end %>
         <%= link_to admin_suggest_path(suggest, status: :rejected),
           class: "btn-flat waves-effect waves-teal tooltipped red",
-          data: {tooltip: I18n.t(".rejected"), confirm: t(".sure")},
+          data: {tooltip: I18n.t("rejected"), confirm: t(".sure")},
           method: :put do %>
           <i class="material-icons white-text">clear</i>
         <% end %>
@@ -31,13 +31,13 @@
         </span>
         <%= link_to admin_suggest_path(suggest, status: :processing),
           class: "btn-flat waves-effect waves-teal tooltipped",
-          data: {tooltip: I18n.t(".processing"), confirm: t(".sure")},
+          data: {tooltip: I18n.t("processing"), confirm: t(".sure")},
           method: :put do %>
           <i class="material-icons deep-orange-text">show_chart</i>
         <% end %>
         <%= link_to admin_suggest_path(suggest, status: :rejected),
           class: "btn-flat waves-effect waves-teal tooltipped red",
-          data: {tooltip: I18n.t(".rejected"), confirm: t(".sure")},
+          data: {tooltip: I18n.t("rejected"), confirm: t(".sure")},
           method: :put do %>
           <i class="material-icons white-text">clear</i>
         <% end %>
@@ -47,13 +47,13 @@
         </span>
         <%= link_to admin_suggest_path(suggest, status: :processing),
           class: "btn-flat waves-effect waves-teal tooltipped",
-          data: {tooltip: I18n.t(".processing"), confirm: t(".sure")},
+          data: {tooltip: I18n.t("processing"), confirm: t(".sure")},
           method: :put do %>
           <i class="material-icons deep-orange-text">show_chart</i>
         <% end %>
         <%= link_to admin_suggest_path(suggest, status: :accepted),
           class: "btn-flat waves-effect waves-teal tooltipped green",
-          data: {tooltip: I18n.t(".accepted"), confirm: t(".sure")},
+          data: {tooltip: I18n.t("accepted"), confirm: t(".sure")},
           method: :put do %>
           <i class="material-icons white-text">done</i>
         <% end %>

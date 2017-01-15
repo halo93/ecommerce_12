@@ -1,6 +1,6 @@
 <% provide :title, t(".title") %>
 <div class="row">
-  <h2 class="center"><i class="material-icons">feedback</i><%= t ".title" %></h2>
+  <h2 class="center"><i class="material-icons small">list</i> <%= t ".title" %></h2>
   <div class="row">
     <div class="col m8">
       <label><%= t "display" %></label>
@@ -15,7 +15,7 @@
       <div class="inline">
         <%= search_form_for @q, url: admin_categories_path do |f| %>
           <%= f.label :name_cont, t(".name_contains"), class: "inline" %>
-          <%= f.text_field :name_cont, class: "inline" %>
+          <%= f.text_field :name_cont, class: "inline", placeholder: t(".press_enter") %>
           <%= f.submit "", style: "display: none" %>
         <% end %>
       </div>
@@ -27,29 +27,31 @@
       <%= render "add_category" %>
     </div>
   </div>
-    <table class="striped bordered highlight">
-      <thead>
-      <tr>
-        <th class="center-align">
-          <%= t ".number" %>
-        </th>
-        <th class="center-align">
-          <%= t ".name" %>
-        </th>
-        <th class="center-align">
-          <%= t ".description" %>
-        </th>
-        <th class="center-align">
-          <%= t".created_at" %>
-        </th>
-        <th class="center-align">
-          <%= t ".option" %>
-        </th>
-      </tr>
-      </thead>
-      <tbody>
+  <table class="striped bordered highlight">
+    <thead>
+    <tr>
+      <th class="center-align">
+        <%= t ".number" %>
+      </th>
+      <th class="center-align">
+        <%= t ".name" %>
+      </th>
+      <th class="center-align">
+        <%= t ".description" %>
+      </th>
+      <th class="center-align">
+        <%= t".created_at" %>
+      </th>
+      <th class="center-align">
+        <%= t ".option" %>
+      </th>
+    </tr>
+    </thead>
+    <tbody id="category-table">
       <%= render @categories %>
-      </tbody>
-    </table>
-    <%= paginate @categories %>
+    </tbody>
+  </table>
+  <div id="paginator">
+    <%= paginate @categories, remote: true %>
+  </div>
 </div>

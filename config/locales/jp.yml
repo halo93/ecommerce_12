@@ -84,6 +84,7 @@ jp:
     categories:
       index:
         title: "カテゴリ一覧"
+        press_enter: "検索を入力する"
         add: "追加する"
         cancel: "キャンセル"
         name: "名"
@@ -110,6 +111,7 @@ jp:
       edit_category:
         edit: "編集"
         cancel: "キャンセル"
+        name_required: "カテゴリ名が必要です"
       destroy:
         must_be_leaf: "カテゴリを削除できません：このカテゴリにはサブカテゴリが含まれています"
         notice_message: "カテゴリを削除できません：このカテゴリには製品が含まれています"

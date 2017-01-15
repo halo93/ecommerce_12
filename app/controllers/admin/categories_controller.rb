@@ -1,7 +1,6 @@
 class Admin::CategoriesController < ApplicationController
   load_and_authorize_resource
   before_action :authenticate_user!, :verify_admin
-  before_action :load_categories_tree, only: [:index, :create]
   layout "admin"
 
   def index
@@ -52,11 +51,5 @@ class Admin::CategoriesController < ApplicationController
   def load_category
     @category = Category.find_by id: params[:id]
     render_404 unless @category
-  end
-
-  def load_categories_tree
-    categories = Category.all
-    @categories_tree = []
-    category_tree categories
   end
 end

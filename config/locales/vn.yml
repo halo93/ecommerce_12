@@ -89,7 +89,8 @@ vn:
     categories:
       index:
         title: "Danh sách danh mục"
-        add: "Thêm"
+        press_enter: "Nhấn phím enter để tìm kiếm"
+        add: "Thêm danh mục"
         cancel: "Hủy bỏ"
         name: "Tên danh mục"
         name_contains: "Tên danh mục chứa"
@@ -116,6 +117,7 @@ vn:
       edit_category:
         edit: "SỬA"
         cancel: "HỦY BỎ"
+        name_required: "Tên danh mục là bắt buộc"
       destroy:
         must_be_leaf: "Xóa danh mục thất bại: Danh mục này chứa danh mục con"
         notice_message: "Xóa danh mục thất bại: Danh mục này có sản phẩm"
