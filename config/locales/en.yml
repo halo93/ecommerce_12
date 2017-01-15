@@ -83,6 +83,13 @@ en:
       category: "Category"
       none: "None"
   suggest: "Suggests list"
+  products:
+    index:
+      all_products: "All products"
+    show:
+      description: "Description"
+      review: "Review"
+      cart: "Add to cart"
   admin:
     categories:
       index:

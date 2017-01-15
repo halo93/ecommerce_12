@@ -14,6 +14,6 @@ Rails.application.routes.draw do
     get "/pages/*page" => "pages#show"
     root "pages#home"
     resources :suggests
-    resources :users
+    resources :users, :products
   end
 end

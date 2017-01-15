@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col s12 m4">
+    <%= image_tag @product.image.present? ? @product.image : "default.jpg",
+      size: "250x250" %>
+  </div>
+  <div class="col s12 m8">
+    <h2><%= @product.name %></h2>
+    <div>
+      <%= @product.description %>
+    </div>
+    <label class="price">$<%= @product.price %></label>
+    <%= link_to t(".cart"), "#", class: "btn" %>
+    <div class="share">
+      <%= social_share_button_tag @product.name %>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a href="#inbox"><%= t ".description" %></a></li>
+        <li class="tab col s3">
+          <a class="active" href="#unread"><%= t ".review" %></a>
+        </li>
+      </ul>
+    </div>
+    <div id="inbox" class="col s12"><%= @product.description %></div>
+    <div id="unread" class="col s12"></div>
+  </div>
+</div>
