@@ -1,6 +1,5 @@
 class Product < ApplicationRecord
   belongs_to :category
-  has_many :rates
   has_many :order_details
   has_many :favorites
   has_many :comments
@@ -8,11 +7,13 @@ class Product < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
+  ratyrate_rateable "quality"
+
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
 
   validates :name, presence: true, uniqueness: true, length: {maximum: 50}
-  validates :product_code, presence: true, length: {maximum: 10}
+  validates :product_code, uniqueness: true
   validates :price, presence: true
   validates :in_stock, presence: true
 
