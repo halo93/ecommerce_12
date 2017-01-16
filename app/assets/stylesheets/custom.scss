@@ -201,3 +201,19 @@ label.price {
 .admin-container{
   width: 80% !important;
 }
+
+.post_comment {
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+    text-align: -webkit-match-parent;
+  }
+  .content {
+    color: #5a4242;
+  }
+  .timestamps {
+    color: #777777;
+    display: block;
+    font-size: 12px;
+  }
+}

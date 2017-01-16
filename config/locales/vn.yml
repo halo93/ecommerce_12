@@ -99,6 +99,14 @@ vn:
       description: "mô tả"
       review: "đánh giá sản phẩm"
       cart: "thêm vào giỏ hàng"
+    form_comment:
+      text_hint: "Nội dung đánh giá..."
+      comment: "Đánh giá sản phẩm: "
+      comment_btn: "Gửi"
+  comments:
+    comment:
+      commented: "đánh giá "
+      ago: " trước."
   admin:
     categories:
       index:
