@@ -4,6 +4,8 @@ $primary-color: color("red", "base") !default;
 @import "materialize";
 @import "materialize/extras/nouislider";
 @import "variable.scss";
+@import "social-share-button";
+
 body {
   color: $body-color;
 }
@@ -176,4 +178,14 @@ footer{
 .user-li{
   padding-left: 10px !important;
   line-height: 64px !important;
+}
+
+label.price {
+  font-size: 2em;
+  color: #1707DB;
+  display: block;
+}
+
+.share {
+  padding-top: 5%;
 }

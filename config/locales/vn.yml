@@ -1,3 +1,4 @@
+
 # Files in the config/locales directory are used for internationalization
 # and are automatically loaded by Rails. If you want to use locales other
 # than English, add the necessary files in this directory.
@@ -90,6 +91,13 @@ vn:
             title:
               blank: "Tiêu đề không được bỏ trống"
   suggest: "Danh sách gợi ý"
+  products:
+    index:
+      all_products: "Tất cả sản phẩm"
+    show:
+      description: "mô tả"
+      review: "đánh giá sản phẩm"
+      cart: "thêm vào giỏ hàng"
   admin:
     categories:
       index:

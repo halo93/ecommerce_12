@@ -85,6 +85,13 @@ jp:
       category: "カテゴリー"
       none: "なし"
   suggest: "リストを提案する"
+  products:
+    index:
+      all_products: "すべての製品"
+    show:
+      description: "説明"
+      review: "レビュー"
+      cart: "カートに追加"
   admin:
     categories:
       index:
