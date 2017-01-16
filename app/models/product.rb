@@ -9,6 +9,8 @@ class Product < ApplicationRecord
 
   ratyrate_rateable "quality"
 
+  before_create :product_code
+
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
 
@@ -51,5 +53,10 @@ class Product < ApplicationRecord
     when ".xlsx" then Roo::Excelx.new file.path
       else raise "Unknown file type"
     end
+  end
+
+  def product_code
+    cate_name = self.category.name.first(3)
+    self[:product_code] = "#{cate_name}-#{Product.last.id + 1}"
   end
 end

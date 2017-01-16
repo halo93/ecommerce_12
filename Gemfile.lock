@@ -411,8 +411,8 @@ DEPENDENCIES
   puma (~> 3.0)
   rails (~> 5.0.1)
   ransack
-  roo
   ratyrate
+  roo
   rubocop (~> 0.46.0)
   sass-rails (~> 5.0)
   simple_form

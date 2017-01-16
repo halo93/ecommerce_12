@@ -8,10 +8,6 @@
           {class: "select", id: "parent_category"} %>
       </div>
       <div>
-        <label><%= t ".product_code" %></label>
-        <%= f.text_field :product_code %>
-      </div>
-      <div>
         <label><%= t ".name" %></label>
         <%= f.text_field :name %>
       </div>
@@ -21,11 +17,11 @@
       </div>
       <div>
         <label><%= t ".price" %></label>
-        <%= f.number_field :price %>
+        <%= f.number_field :price, min: 0 %>
       </div>
       <div>
         <label><%= t ".in_stock" %></label>
-        <%= f.number_field :in_stock %>
+        <%= f.number_field :in_stock, min: 0 %>
       </div>
     </div>
     <div class="modal-footer">
