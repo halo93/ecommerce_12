@@ -36,3 +36,17 @@
     </div>
   </div>
 <% end %>
+<%= form_tag import_admin_products_path, multipart: true do %>
+  <div class="file-field input-field">
+    <div class="btn">
+      <span><%= t ".import" %></span>
+      <%= file_field_tag :file %>
+    </div>
+    <div class="file-path-wrapper">
+      <input class="file-path file-import" type="text">
+      <%= submit_tag t(".submit"), class: "waves-effect waves-green btn right" %>
+    </div>
+  </div>
+<% end %>
+
+

@@ -10,6 +10,9 @@ Rails.application.routes.draw do
       resources :products
       resources :users
       resources :suggests
+      resources :products do
+        collection{post :import}
+      end
     end
     get "/pages/*page" => "pages#show"
     root "pages#home"

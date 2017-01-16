@@ -154,6 +154,8 @@ jp:
         image: "画像"
         price: "価格"
         in_stock: "株式"
+        submit: "提出する"
+        import: "インポート"
       create:
         product_created: "製品を正常に追加する"
         fail_to_create: "製品の作成に失敗する"

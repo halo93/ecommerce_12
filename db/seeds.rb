@@ -42,10 +42,10 @@ Category.create name: "Giftbox for friend",
   description: "This is Giftbox for friend", depth: 1, lft: 16, rgt: 17
 
 10.times do |p|
-  product_name = FFaker::Food.fruit + "#{p}"
+  product_name = FFaker::Food.fruit + p.to_s
   description = "a gift box, complete with fill,
     and attractively wrapped in cellophane."
-  product_code = "PSR-#{p+1}"
+  product_code = "PSR-#{p + 1}"
   price = 100
   in_stock = 10
   category_id = p + 1

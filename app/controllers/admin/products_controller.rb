@@ -23,6 +23,20 @@ class Admin::ProductsController < ApplicationController
     redirect_to admin_products_path
   end
 
+  def import
+    if params[:file].present?
+      flag = Product.import params[:file]
+      if flag
+        flash[:success] = t ".imported"
+      else
+        flash[:danger] = t ".fail_exist"
+      end
+    else
+      flash[:danger] = t ".fail_to_import"
+    end
+    redirect_to admin_products_path
+  end
+
   private
   def product_params
     params.require(:product).permit :category_id, :name, :image,

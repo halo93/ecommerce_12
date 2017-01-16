@@ -41,6 +41,7 @@ gem "mini_magick"
 gem "fog"
 gem "friendly_id"
 gem "social-share-button"
+gem "roo"
 
 group :development, :test do
   gem "byebug", platform: :mri

@@ -24,4 +24,31 @@ class Product < ApplicationRecord
   def should_generate_new_friendly_id?
     name_changed? || super
   end
+
+  def self.import file
+    spreadsheet = open_spreadsheet file
+    header = spreadsheet.row(1)
+    flag = true
+    (2..spreadsheet.last_row).each do |i|
+      row = Hash[[header, spreadsheet.row(i)].transpose]
+      product = find_by(id: row["id"]) || new
+      product.attributes = row.to_hash.slice(*row.to_hash.keys)
+      if product.valid?
+        product.save!
+      else
+        flag = false
+        break
+      end
+    end
+    flag
+  end
+
+  def self.open_spreadsheet file
+    case File.extname file.original_filename
+    when ".csv" then Roo::CSV.new file.path
+    when ".xls" then Roo::Excel.new file.path
+    when ".xlsx" then Roo::Excelx.new file.path
+      else raise "Unknown file type"
+    end
+  end
 end
