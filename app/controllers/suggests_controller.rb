@@ -1,11 +1,11 @@
 class SuggestsController < ApplicationController
   before_action :authenticate_user!
-  before_action :load_suggested_product, only: :show
 
   def index
     params[:limit] ||= Settings.show_limit.show_6
     @search = current_user.suggests.ransack params[:q]
-    @suggests = current_user.suggests.order_by_creation_time
+    @q = current_user.suggests.search params[:q]
+    @suggests = @q.result(distinct: true).order_by_updated_time
       .page(params[:page]).per params[:limit].to_i
   end
 
