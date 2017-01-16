@@ -5,6 +5,7 @@
   <thead>
     <th><%= t ".category" %></th>
     <th><%= t ".product_name" %></th>
+    <th><%= t ".code" %></th>
     <th><%= t ".price" %></th>
     <th><%= t ".in_stock" %></th>
     <th><%= t ".thumbnail" %></th>
@@ -12,6 +13,7 @@
   <tr>
     <td><%= @product.category.name %></td>
     <td><%= @product.name %></td>
+    <td><%= @product.product_code %></td>
     <td><%= @product.price %></td>
     <td><%= @product.in_stock %></td>
     <td><%= image_tag @product.image , size: "50x50" %></td>

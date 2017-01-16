@@ -170,6 +170,7 @@ vn:
         detail_product: "chi tiết sản phẩm"
         category: "danh mục"
         product_name: "tên sản phẩm"
+        code: "mã sản phẩm"
         price: "giá"
         in_stock: "kho hàng"
         thumbnail: "ảnh xem trước"

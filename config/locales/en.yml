@@ -159,6 +159,7 @@ en:
         detail_product: "Detail Product"
         category: "Category"
         product_name: "Product name"
+        code: "Product code"
         price: "Price"
         in_stock: "In stock"
         thumbnail: "Thumbnail"

@@ -163,6 +163,7 @@ jp:
         detail_product: "詳細な製品"
         category: "カテゴリー"
         product_name: "商品名"
+        code: "製品コード"
         price: "価格"
         in_stock: "株式"
         thumbnail: "サムネイル"
