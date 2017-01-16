@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     end
     get "/pages/*page" => "pages#show"
     root "pages#home"
+    post "/rate", to: "rater#create", as: "rate"
     resources :suggests
     resources :users, :products
   end

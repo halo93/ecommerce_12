@@ -42,6 +42,7 @@ gem "fog"
 gem "friendly_id"
 gem "social-share-button"
 gem "roo"
+gem "ratyrate"
 
 group :development, :test do
   gem "byebug", platform: :mri
