@@ -150,6 +150,8 @@ en:
         image: "Image"
         price: "Price"
         in_stock: "In Stock"
+        submit: "Submit"
+        import: "Import"
       create:
         product_created: "Add products successfully"
         fail_to_create: "Fail to create products"

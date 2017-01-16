@@ -161,6 +161,8 @@ vn:
         image: "ảnh"
         price: "giá"
         in_stock: "kho hàng"
+        submit: "Tải lên"
+        import: "Import"
       create:
         product_created: "thêm mới một sản phẩm thành công"
         fail_to_create: "lỗi khi thêm mới một sản phẩm"
