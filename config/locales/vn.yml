@@ -35,6 +35,7 @@ vn:
   change_admin: "Đang là tài khoản thường. Chuyển thành quản trị viên?"
   change_user: "Đang là tài khoản admin. Giáng cấp thành người dùng?"
   delete: "Xóa"
+  edit: "Chỉnh sửa"
   processing: "Chuyển về đang xử lý"
   accepted: "Đồng ý"
   rejected: "Từ chối"
@@ -115,6 +116,7 @@ vn:
         edit: "sửa"
         view: "chi tiết"
         delete: "xóa"
+        product_count: "Sản phẩm"
       create:
         create_success: "Thêm danh mục thành công"
         create_fail: "Thêm danh mục thất bại"
@@ -150,8 +152,12 @@ vn:
         price: "đơn giá"
         in_stock: "hàng trong kho"
         action: "tùy chọn"
+        title: "Danh sách sản phẩm"
+        name_or_cate_contains: "Tên sản phẩm hoặc danh mục có chứa"
+        press_enter: "Nhấn enter để tìm kiếm"
       product:
         not_available: "hết hàng"
+        sure_delete: "Bạn có muốn xóa sản phẩm này?"
       form:
         add: "thêm"
         cancel: "hủy bỏ"
@@ -174,6 +180,22 @@ vn:
         price: "giá"
         in_stock: "kho hàng"
         thumbnail: "ảnh xem trước"
+        back: "Trở lại trang quản lý sản ph"
+      edit_product:
+        name: "Tên sản phẩm"
+        description: "Mô tả"
+        parent_category: "Danh mục"
+        price: "Giá"
+        in_stock: "Số lượng"
+        cancel: "Hủy"
+        edit: "Xác nhận"
+        name_required: "Tên sản phẩm không được bỏ trống"
+      update:
+        update_success: "Cập nhật sản phẩm thành công"
+        update_danger: "Cập nhật sản phẩm thất bại"
+      destroy:
+        product_deleted: "Xóa sản phẩm thành công"
+        fail_to_delete: "Xóa sản phẩm thất bại"
     users:
       index:
         title: "Danh sách thành viên"

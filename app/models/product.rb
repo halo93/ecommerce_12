@@ -10,6 +10,7 @@ class Product < ApplicationRecord
   ratyrate_rateable "quality"
 
   before_create :product_code
+  before_update :product_code
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
@@ -56,7 +57,9 @@ class Product < ApplicationRecord
   end
 
   def product_code
-    cate_name = self.category.name.first(3)
-    self[:product_code] = "#{cate_name}-#{Product.last.id + 1}"
+    cate_code = "#{self.category.name.first(3).upcase}-#{self.category.id}"
+    last_record = self.category.products.last
+    self[:product_code] = \
+      last_record.nil? ? "#{cate_code}-1" : "#{cate_code}-#{last_record.id + 1}"
   end
 end

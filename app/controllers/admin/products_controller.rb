@@ -5,12 +5,23 @@ class Admin::ProductsController < ApplicationController
 
   def index
     params[:limit] ||= Settings.show_limit.show_6
-    @product = Product.new
-    @products = Product.includes(:category).in_category(params[:category_id])
-      .page(params[:page]).per params[:limit].to_i
+    @search = Product.ransack params[:q]
+    @q = Product.search params[:q]
+    @products = @q.result(distinct: true).includes(:category)
+      .in_category(params[:category_id]).page(params[:page])
+      .per params[:limit].to_i
   end
 
   def show
+  end
+
+  def update
+    if @product.update_attributes product_params
+      flash[:success] = t ".update_success"
+    else
+      flash[:danger] = t".update_fail"
+    end
+    redirect_back fallback_location: :back
   end
 
   def create
@@ -20,7 +31,16 @@ class Admin::ProductsController < ApplicationController
     else
       flash[:danger] = t ".fail_to_create"
     end
-    redirect_to admin_products_path
+    redirect_back fallback_location: :back
+  end
+
+  def destroy
+    if @product.destroy
+      flash[:success] = t ".product_deleted"
+    else
+      flash[:danger] = t ".fail_to_delete"
+    end
+    redirect_back fallback_location: :back
   end
 
   def import
@@ -40,6 +60,6 @@ class Admin::ProductsController < ApplicationController
   private
   def product_params
     params.require(:product).permit :category_id, :name, :image,
-      :product_code, :price, :in_stock
+      :price, :in_stock, :description, :id
   end
 end

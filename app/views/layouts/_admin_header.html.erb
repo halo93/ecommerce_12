@@ -85,8 +85,11 @@
       <% end %>
     </li>
     <li>
-      <a href="<%= admin_products_path %>" class="waves-effect waves-grey">
-        <i class="material-icons">card_giftcard</i>
+      <a href="<%= admin_products_path %>"
+         class="waves-effect waves-grey <%= active_class_admin admin_products_path %>">
+        <i class="material-icons <%= active_icon_admin admin_products_path %>">
+          card_giftcard
+        </i>
         <%= t".product" %>
       </a>
     </li>

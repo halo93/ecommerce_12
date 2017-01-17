@@ -16,6 +16,13 @@
     <td><%= @product.product_code %></td>
     <td><%= @product.price %></td>
     <td><%= @product.in_stock %></td>
-    <td><%= image_tag @product.image , size: "50x50" %></td>
+    <td>
+      <%= image_tag @product.image, class: "materialboxed",
+        data: {caption: @product.description}, size: "50x50" %>
+    </td>
   </tr>
 </table>
+<%= link_to admin_products_path, class: "waves-effect waves-teal btn tooltipped",
+    data: {tooltip: t(".back")} do %>
+    <i class="material-icons">keyboard_backspace</i>
+<% end %>

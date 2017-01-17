@@ -7,6 +7,7 @@
     <td class="center-align"><%= category.name %></td>
     <td class="center-align"><%= category.description %></td>
     <td class="center-align"><%= l category.created_at, format: :date_format %></td>
+    <td class="center-align"><%= category.products.size %></td>
     <td class="center-align">
       <%= link_to "#modal2-#{category.id}",
         class: "btn-flat waves-effect waves-teal tooltipped",
@@ -27,6 +28,7 @@
       <td class="center-align"><%= "-.-" * category.depth %><%= category.name %></td>
       <td class="center-align"><%= category.description %></td>
       <td class="center-align"><%= l category.created_at, format: :date_format %></td>
+      <td class="center-align"><%= category.products.size %></td>
       <td class="center-align">
         <%= link_to "#modal2-#{category.id}",
           class: "btn-flat waves-effect waves-teal tooltipped",

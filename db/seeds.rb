@@ -29,7 +29,7 @@ Category.create name: "Giftbox for lover",
 Category.create name: "Giftbox for parents",
   description: "This is Giftbox for parents", depth: 1, lft: 4, rgt: 5
 Category.create name: "New Year Giftbox",
-  description: "This is New Year Giftbox", depth: 0, lft: 7, rgt: 18
+  description: "This is New Year Giftbox", depth: 0, lft: 7, rgt: 20
 Category.create name: "Giftbox for parents-in-law",
   description: "This is Giftbox for parents-in-law", depth: 1, lft: 8, rgt: 9
 Category.create name: "Giftbox for boss",
@@ -40,18 +40,18 @@ Category.create name: "Giftbox for grandparents",
   description: "This is Giftbox for grandparents", depth: 1, lft: 14, rgt: 15
 Category.create name: "Giftbox for friend",
   description: "This is Giftbox for friend", depth: 1, lft: 16, rgt: 17
+Category.create name: "Giftbox for trainer",
+  description: "This is Giftbox for trainer", depth: 1, lft: 18, rgt: 19
 
 10.times do |p|
   product_name = FFaker::Food.fruit + p.to_s
-  description = "a gift box, complete with fill,
-    and attractively wrapped in cellophane."
-  product_code = "PSR-#{p + 1}"
+  description = "a gift box, complete with fill,"\
+    "and attractively wrapped in cellophane."
   price = 100
   in_stock = 10
   category_id = p + 1
   Product.create! name: product_name,
     description: description,
-    product_code: product_code,
     price: price,
     in_stock: in_stock,
     category_id: category_id
