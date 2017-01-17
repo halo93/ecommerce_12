@@ -33,6 +33,7 @@ en:
   change_admin: "Current Role: User. Change to Admin?"
   change_user: "Current Role: Admin. Change to User?"
   delete: "Delete"
+  edit: "Edit"
   processing: "Move to processing"
   accepted: "Accept"
   rejected: "Reject"
@@ -104,6 +105,7 @@ en:
         edit: "Edit"
         view: "View"
         delete: "Delete"
+        product_count: "Product Count"
       create:
         create_success: "Create category success"
         create_fail: "Create category fail"
@@ -139,8 +141,12 @@ en:
         price: "Price"
         in_stock: "In stock"
         action: "Action"
+        title: "Products list"
+        name_or_cate_contains: "Name or category contains"
+        press_enter: "Press enter to search"
       product:
         not_available: "Not available"
+        sure_delete: "Are you sure to delete this product?"
       form:
         add: "Add"
         cancel: "Cancel"
@@ -163,6 +169,22 @@ en:
         price: "Price"
         in_stock: "In stock"
         thumbnail: "Thumbnail"
+        back: "Back to products management"
+      edit_product:
+        name: "Name"
+        description: "Description"
+        parent_category: "Parent category"
+        price: "Price"
+        in_stock: "In stock"
+        cancel: "Cancel"
+        edit: "Edit"
+        name_required: "Product name is required"
+      update:
+        update_success: "Successfully updated product"
+        update_danger: "Fail to update product"
+      destroy:
+        product_deleted: "Successfully deleted product"
+        fail_to_delete: "Fail to delete this product"
     users:
       index:
         title: "Users list"

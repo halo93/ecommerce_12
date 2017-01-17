@@ -83,11 +83,12 @@ class ApplicationController < ActionController::Base
   end
 
   def layout_by_resource
-    if devise_controller? && resource_name == :user &&
-      (action_name == "edit" || action_name == "update")
-      "admin"
-    else
-      "application"
+    if devise_controller? && (action_name == "edit" || action_name == "update")
+      if current_user.nil?
+        "application"
+      else
+        current_user.admin? ? "admin" : "application"
+      end
     end
   end
 end

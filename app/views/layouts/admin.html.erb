@@ -11,7 +11,7 @@
         <%= render "layouts/admin_header" %>
       </header>
       <main class="admin-panel">
-        <div class="container" id="main-content">
+        <div class="container admin-container" id="main-content">
           <% flash.each do |message_type, message| %>
             <%= javascript_tag do %>
               <%= render(partial: "shared/error_messages", formats: [:js],

@@ -1,6 +1,38 @@
+<% provide :title, t(".title") %>
 <div class="row tab">
-  <a class="waves-effect waves-light btn" href="#modal1"><%= t".add" %></a>
-  <%= render "form" %>
+  <h2 class="center">
+    <i class="material-icons small">card_giftcard</i> <%= t ".title" %>
+  </h2>
+  <div class="row">
+    <div class="col m8">
+      <label><%= t "display" %></label>
+      <%= search_form_for @search, url: admin_products_path, style: "display: block" do |f| %>
+        <%= select_tag :limit,
+          options_from_collection_for_select(Settings.show_limit,
+          :second, :second, selected: params[:limit] || Settings.show_limit.limit),
+          id: "show-limit", style: "display: block" %>
+        <%= f.submit "", style: "display: none" %>
+      <% end %>
+      <label><%= t "records" %></label>
+      <div class="inline">
+        <%= search_form_for @q, url: admin_products_path do |f| %>
+          <%= f.label :name_or_category_name_cont, t(".name_or_cate_contains"),
+            class: "inline" %>
+          <%= f.text_field :name_or_category_name_cont, class: "inline",
+            placeholder: t(".press_enter") %>
+          <%= f.submit "", style: "display: none" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col m4 bottom-sheet add-category">
+      <a class="waves-effect waves-light btn" href="#modal1">
+        <%= t".add" %>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <%= render "form" %>
+  </div>
   <table class="striped bordered highlight">
     <thead>
       <tr>
@@ -8,10 +40,13 @@
           <%= t ".number" %>
         </th>
         <th class="center-align">
-          <%= t ".cate_name" %>
+          <%= t "admin.products.form.product_code" %>
         </th>
         <th class="center-align">
           <%= t ".name" %>
+        </th>
+        <th class="center-align">
+          <%= t ".cate_name" %>
         </th>
         <th class="center-align">
           <%= t".price" %>
