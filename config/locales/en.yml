@@ -87,6 +87,7 @@ en:
   products:
     index:
       all_products: "All products"
+      recent_view: "Recent views"
     show:
       description: "Description"
       review: "Review"
