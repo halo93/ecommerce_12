@@ -17,8 +17,8 @@ class Product < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true, length: {maximum: 50}
   validates :product_code, uniqueness: true
-  validates :price, presence: true
-  validates :in_stock, presence: true
+  validates :price, presence: true, numericality: true
+  validates :in_stock, presence: true, numericality: {only_integer: true}
 
   delegate :name, :depth, to: :category, prefix: true
 

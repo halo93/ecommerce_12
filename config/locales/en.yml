@@ -72,6 +72,10 @@ en:
       categories: "Categories"
       edit: "Edit profile"
       logout: "Logout"
+    header:
+      index_cart: "Checkout now!"
+      cart_empty: "Your cart is empty"
+      items: "item(s)"
   suggests:
     index:
       title: "Suggests list"
@@ -100,6 +104,20 @@ en:
     comment:
       commented: "commented "
       ago: " ago."
+  cart:
+    index:
+      your_cart: "Your shopping cart"
+      name: "Product name"
+      image: "Image"
+      price: "Price"
+      quantity: "Quantity"
+      total_price: "Total price"
+      remove: "Remove"
+      code: "Product code"
+      delete_confirm: "Are you sure to remove this product from cart?"
+      next: "Next"
+      buy_more: "Buy more"
+      new_cart: "New cart"
   admin:
     categories:
       index:

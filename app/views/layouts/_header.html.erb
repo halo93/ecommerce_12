@@ -58,12 +58,19 @@
             <%= link_to (t "signout"), destroy_user_session_path, method: :delete %>
           </li>
         </ul>
-        <li>
-          <span>
-
-          </span>
-        </li>
       <% end %>
+      <li>
+        <a class="dropdown-button" id="shopping-cart" data-activates="dropdown2"
+          data-beloworigin="true">
+          <i class="material-icons">shopping_cart</i>
+          <span class="badge circle white-text number-cart">
+            <%= session[:cart].nil? ? 0 : session[:cart].size %>
+          </span>
+        </a>
+      </li>
+      <ul id="dropdown2" class="dropdown-content drop-cart">
+        <%= render partial: "cart/cart_item", locals: {cart: session[:cart]} %>
+      </ul>
       <li class="tab-nav">
         <a class="dropdown-button" data-activates="dropdown1">
           <i class="material-icons right">language</i>

@@ -9,7 +9,10 @@
       <%= @product.description %>
     </div>
     <label class="price">$<%= @product.price %></label>
-    <%= link_to t(".cart"), "#", class: "btn" %>
+    <%= link_to "", id: "add-cart-#{@product.id}", data: @product.id,
+      class: "btn add-to-cart", title: t(".cart") do %>
+        <i class="material-icons">add_shopping_cart</i>
+    <% end %>
     <div class="share">
       <%= social_share_button_tag @product.name %>
     </div>

@@ -217,3 +217,31 @@ label.price {
     font-size: 12px;
   }
 }
+
+.number-cart{
+  position: absolute;
+  border-radius: 70%;
+  right: 70px;
+  top: 12px;
+  background-color: rebeccapurple;
+  min-width: 1px !important;
+  font-size: 12px !important;
+  line-height: 20px;
+  height: 20px;
+}
+
+.cart-desc{
+  white-space: initial !important;
+}
+
+.drop-cart{
+  overflow-y: scroll;
+  max-height: 300px;
+}
+
+.checkout-cart{
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 15px;
+  background-color: orange !important;
+}

@@ -73,6 +73,10 @@ vn:
       categories: "Quản lý danh mục"
       edit: "Chỉnh sửa thông tin"
       logout: "Đăng xuất"
+    header:
+      index_cart: "Thanh toán ngay!"
+      cart_empty: "Giỏ hàng của bạn tr"
+      items: "đơn vị"
   suggests:
     index:
       title: "Danh sách gợi ý"
@@ -108,6 +112,20 @@ vn:
     comment:
       commented: "đánh giá "
       ago: " trước."
+  cart:
+    index:
+      your_cart: "Giỏ hàng của bạn"
+      name: "Tên sản phẩm"
+      image: "Image"
+      price: "Giá niêm yết"
+      quantity: "Số lượng"
+      total_price: "Thành tiền"
+      remove: "Xóa"
+      code: "Mã sản phẩm"
+      delete_confirm: "Bạn có muốn bỏ sản phẩm này ra khỏi giỏ?"
+      next: "Đến trang thanh toán"
+      buy_more: "Mua thêm"
+      new_cart: "Giỏ hàng mới"
   admin:
     categories:
       index:
