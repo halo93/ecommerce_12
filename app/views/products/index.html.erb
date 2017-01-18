@@ -3,3 +3,9 @@
   <h1><%= t ".all_products" %></h1>
   <%= render @products %>
 </div>
+<div class="row">
+  <h2><%= t ".recent_view" %></h2>
+  <% if @recent_products.present? %>
+    <%= render @recent_products %>
+  <% end %>
+</div>

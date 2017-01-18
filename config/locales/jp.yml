@@ -89,6 +89,7 @@ jp:
   products:
     index:
       all_products: "すべての製品"
+      recent_view: "最近の見方"
     show:
       description: "説明"
       review: "レビュー"

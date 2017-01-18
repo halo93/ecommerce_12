@@ -95,6 +95,7 @@ vn:
   products:
     index:
       all_products: "Tất cả sản phẩm"
+      recent_view: "Gần đây"
     show:
       description: "mô tả"
       review: "đánh giá sản phẩm"
