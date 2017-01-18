@@ -30,6 +30,13 @@
       </ul>
     </div>
     <div id="inbox" class="col s12"><%= @product.description %></div>
-    <div id="unread" class="col s12"></div>
+    <div id="unread" class="col s12">
+      <%= render "form_comment" %>
+      <div class="post_comment">
+        <ul id="comments">
+          <%= render @comments %>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,0 +1,24 @@
+<li id="<%= dom_id(comment) %>">
+  <div class="row">
+    <div class="col s12 m1">
+      <%= image_tag comment.user.avatar? ?
+        comment.user.avatar : "default_avatar.png" , size: "50x50", class: "circle" %>
+    </div>
+    <div class="col s12 m10">
+      <span><%= comment.user.name %></span>
+      <span class="content"><br>
+        <%= comment.content %>
+      </span>
+      <span class="timestamps">
+        <%= t ".commented" %><%= time_ago_in_words(comment.created_at) %>
+        <%= t ".ago" %>
+      </span>
+    </div>
+    <% if current_user == comment.user %>
+      <%= link_to product_comment_path(@product, comment),
+        class: "delete-comment", method: :delete do %>
+        <i class="material-icons">delete</i>
+      <% end %>
+    <% end %>
+  </div>
+</li>

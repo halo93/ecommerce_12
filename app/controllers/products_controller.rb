@@ -4,4 +4,8 @@ class ProductsController < ApplicationController
 
   def index
   end
+
+  def show
+    @comments = @product.comments.order(created_at: :desc)
+  end
 end

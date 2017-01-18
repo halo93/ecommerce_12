@@ -91,6 +91,14 @@ en:
       description: "Description"
       review: "Review"
       cart: "Add to cart"
+    form_comment:
+      text_hint: "Enter your comment..."
+      comment: "Add your comment: "
+      comment_btn: "Comment"
+  comments:
+    comment:
+      commented: "commented "
+      ago: " ago."
   admin:
     categories:
       index:

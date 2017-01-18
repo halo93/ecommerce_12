@@ -93,6 +93,14 @@ jp:
       description: "説明"
       review: "レビュー"
       cart: "カートに追加"
+    form_comment:
+      text_hint: "あなたのコメントを入力してください..."
+      comment: "あなたのコメントを追加: "
+      comment_btn: "コメント"
+  comments:
+    comment:
+      commented: "コメントした "
+      ago: " 前."
   admin:
     categories:
       index:

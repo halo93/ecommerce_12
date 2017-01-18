@@ -44,6 +44,7 @@ bower.json
 /test/
 /config/database.yml
 /public/uploads/
+/public/javascripts/translations.js
 
 config/settings.local.yml
 config/settings/*.local.yml
