@@ -74,6 +74,10 @@ jp:
       categories: "カテゴリ管理"
       edit: "プロファイル編集"
       logout: "ログアウト"
+    header:
+      index_cart: "今すぐチェックアウト!"
+      cart_empty: "ショッピングカートは空です"
+      items: "項目"
   suggests:
     index:
       title: "リストを提案する"
@@ -102,6 +106,20 @@ jp:
     comment:
       commented: "コメントした "
       ago: " 前."
+  cart:
+    index:
+      your_cart: "あなたのショッピングカート"
+      name: "商品名"
+      image: "画像"
+      price: "価格"
+      quantity: "量"
+      total_price: "合計金額"
+      remove: "除去する"
+      code: "製品コード"
+      delete_confirm: "この商品をカートから削除してもよろしいですか？"
+      next: "次"
+      buy_more: "もっと買う"
+      new_cart: "新しいカート"
   admin:
     categories:
       index:

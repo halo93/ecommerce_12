@@ -1,0 +1,64 @@
+<h3 class="center"><%= t ".your_cart" %></h3>
+  <table class="table-cart">
+    <thead>
+    <tr>
+      <th><%= t ".code" %></th>
+      <th><%= t ".name" %></th>
+      <th><%= t ".image" %></th>
+      <th><%= t ".price" %>($)</th>
+      <th><%= t ".quantity" %></th>
+      <th><%= t ".total_price" %></th>
+      <th><%= t ".remove" %></th>
+    </tr>
+    </thead>
+    <% @product_carts.each do |product, in_cart| %>
+      <% unless product.nil? %>
+        <tr>
+          <td><%= product.product_code %></td>
+          <td>
+            <%= link_to product.name, product_path(product) %></td>
+          <td>
+            <%= image_tag product.image, class: "materialboxed",
+              data: {caption: product.description}, size: "50x50" %>
+          </td>
+          <td>
+            <p id="price-<%= product.id %>">
+              <%= product.price %>
+            </p>
+          </td>
+          <td>
+            <input type="number" name="quantity" min="1"
+            max="<%= product.in_stock %>" value="<%= in_cart["quantity"] %>"
+            data="<%= product.id %>" class="cart-quantity form-control"
+            id= "quantity-<%= product.id %>">
+          </td>
+          <td>
+            <p id="total-<%= product.id %>">
+              <%= product.price * in_cart["quantity"] %>
+            </p>
+          </td>
+          <td>
+            <p class="empty-one">
+              <%= link_to "/cart/#{product.id}/delete",
+                method: :delete, data: {confirm: t(".delete_confirm")} do %>
+                <i class="material-icons">delete</i>
+              <% end %>
+            </p>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </table>
+<div class="divider"></div>
+<br>
+<div class="right">
+  <% if @product_carts.size > 0 %>
+    <%= link_to t(".next"), new_order_path,
+      class: "btn", id: "update-cart" %>
+    <%= link_to t(".buy_more"), products_path,
+      class: "btn" %>
+  <% else %>
+    <%= link_to t(".new_cart"), products_path,
+      class: "btn" %>
+  <% end %>
+</div>

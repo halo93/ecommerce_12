@@ -22,5 +22,11 @@ Rails.application.routes.draw do
     resources :products do
       resources :comments
     end
+    resources :users, :products, :orders
+    get "/cart", to: "cart#index"
+    delete "/cart/:id/delete", to: "cart#destroy"
+    post "/cart/:id", to: "cart#create"
+    patch "/cart", to: "cart#update"
+    get "/cart/:id/edit", to: "cart#edit"
   end
 end

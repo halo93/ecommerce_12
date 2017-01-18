@@ -1,4 +1,4 @@
-<div class="col s12 m4">
+<div class="col s12 m4" id="<%= product.name %>">
   <div class="card small">
     <div class="card-image">
       <%= image_tag product.image.present? ? product.image : "default.jpg" %>
@@ -10,7 +10,7 @@
       <%= link_to product_path(product) do %>
         <i class="material-icons">search</i>
       <% end %>
-      <%= link_to "#" do %>
+      <%= link_to "", id: "add-cart-#{product.id}", data: product.id, class: "add-to-cart" do %>
         <i class="material-icons">add_shopping_cart</i>
       <% end %>
     </div>

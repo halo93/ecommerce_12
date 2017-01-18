@@ -2,6 +2,7 @@ class User < ApplicationRecord
   mount_uploader :avatar, ImageUploader
   devise :omniauthable, :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
+  attr_accessor :remote_avatar_url
   has_many :comments
   has_many :orders
   has_many :favorites
@@ -16,7 +17,7 @@ class User < ApplicationRecord
       user.uid = auth.uid
       user.email = auth.info.email
       user.name = auth.info.name
-      user.avatar = auth.info.picture
+      user.avatar = auth.info.image
       user.password = Devise.friendly_token[0, 20]
     end
   end
