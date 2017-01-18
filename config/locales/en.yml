@@ -57,9 +57,8 @@ en:
     help:
       title: "Help"
       content: "This is our help page"
-    about:
-      title: "About"
-      content: "This is our about page"
+    product:
+      title: "Products"
   layouts:
     footer:
       suggest_title: "Suggest a product"
@@ -92,6 +91,10 @@ en:
     index:
       all_products: "All products"
       recent_view: "Recent views"
+      search: "Search"
+      name: "Name"
+      from: "From"
+      to: "To"
     show:
       description: "Description"
       review: "Review"

@@ -58,9 +58,8 @@ vn:
     help:
       title: "Trợ giúp"
       content: "Đây là trang trợ giúp"
-    about:
-      title: "Giới thiệu"
-      content: "Đây là trang giới thiệu"
+    product:
+      title: "Sản phẩm"
   layouts:
     footer:
       suggest_title: "Gợi ý sản phẩm"
@@ -100,6 +99,10 @@ vn:
     index:
       all_products: "Tất cả sản phẩm"
       recent_view: "Gần đây"
+      search: "Tìm"
+      name: "Tên"
+      from: "Từ"
+      to: "Tới"
     show:
       description: "mô tả"
       review: "đánh giá sản phẩm"
