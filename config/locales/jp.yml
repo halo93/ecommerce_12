@@ -270,6 +270,18 @@ jp:
         title: "リストを提案する"
         name_or_content: "タイトルまたは内容が含まれています"
         search: "サーチ"
+    orders:
+      index:
+        title: "オーダーリスト"
+        code_or_name: "注文コードまたは顧客名が含まれています"
+      order:
+        phone: "電話"
+        shipping_address: "お届け先の住所"
+        customer: "顧客"
+        updated_at: "更新日"
+      update:
+        update_success: "注文のステータスが更新されました"
+        update_fail: "注文のステータスの更新に失敗しました"
   datetime:
     distance_in_words:
       x_days:

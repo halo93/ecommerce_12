@@ -1,0 +1,40 @@
+<% provide :title, t(".title") %>
+<h2 class="center"><i class="material-icons small">
+  assignment_turned_in</i> <%= t ".title" %>
+</h2>
+<div class="row">
+  <div class="col s12 m2">
+    <%= search_form_for @search, url: admin_orders_path do |f|%>
+      <label><%= t "display" %></label>
+      <%= select_tag :limit,
+        options_from_collection_for_select(Settings.show_limit,
+        :second, :second, selected: params[:limit] || Settings.show_limit.limit),
+        id: "show-limit", style: "display: block" %>
+      <%= f.submit "", style: "display: none" %>
+      <label><%= t "records" %></label>
+    <% end %>
+  </div>
+  <div class="col s12 m10 right">
+    <div class="row">
+      <%= search_form_for @q, url: admin_orders_path do |f| %>
+        <div class="col s12 m8">
+          <%= f.label :order_code_or_user_name_cont, t(".code_or_name") %>
+          <%= f.text_field :order_code_or_user_name_cont %>
+        </div>
+        <div class="col s12 m4">
+          <%= f.select :status_eq,
+            Order.statuses.to_a.map{|m| [m[0].humanize, m[1]]},
+            {include_blank: t(".select-status")},
+            {class: "select-status input-field select-order-stt", autofocus: true} %>
+          <%= f.submit t("products.index.search"), class: "waves-effect waves-light btn right" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="row" id="orders">
+  <%= render @orders %>
+</div>
+<div id="paginator">
+  <%= paginate @orders, remote: true %>
+</div>

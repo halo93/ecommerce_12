@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :products
       resources :users
       resources :suggests
+      resources :orders
       resources :products do
         collection{post :import}
       end
@@ -18,7 +19,6 @@ Rails.application.routes.draw do
     root "pages#home"
     post "/rate", to: "rater#create", as: "rate"
     resources :suggests
-    resources :users
     resources :products do
       resources :comments
     end
