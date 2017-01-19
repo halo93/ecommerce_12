@@ -261,6 +261,18 @@ en:
         title: "Suggests list"
         name_or_content: "Title or Content contains"
         search: "Search"
+    orders:
+      index:
+        title: "Orders list"
+        code_or_name: "Order code or customer name contains"
+      order:
+        phone: "Phone"
+        shipping_address: "Shipping Address"
+        customer: "Customer"
+        updated_at: "Updated at"
+      update:
+        update_success: "Order's status updated"
+        update_fail: "Fail to update order's status"
   order_mailer:
     order_confirm:
       code: "Product code"
@@ -268,4 +280,3 @@ en:
       quantity: "Quantity"
       price: "Price"
       total_price: "Total price"
-

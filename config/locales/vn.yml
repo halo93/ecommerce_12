@@ -277,6 +277,18 @@ vn:
         title: "Danh sách gợi ý"
         name_or_content: "Tên hoặc nội dung có chứa"
         search: "Tìm kiếm"
+    orders:
+      index:
+        title: "Danh sách đơn hàng"
+        code_or_name: "Mã đơn hàng hoặc tên khách hàng có chứa"
+      order:
+        phone: "Sđt"
+        shipping_address: "Địa chỉ"
+        customer: "Khách hàng"
+        updated_at: "Cập nhật ngày"
+      update:
+        update_success: "Cập nhật trạng thái đơn hàng thành công"
+        update_fail: "Cập nhật trạng thái đơn hàng thất bại"
   datetime:
     distance_in_words:
       x_days:

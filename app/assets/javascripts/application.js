@@ -28,4 +28,10 @@ $(document).on('turbolinks:load', function() {
       $(this).closest('form').trigger('submit');
     });
   });
+
+  $(function(){
+    $('.admin-update-order').on('change', function(){
+      $(this).closest('form').trigger('submit');
+    });
+  });
 });
