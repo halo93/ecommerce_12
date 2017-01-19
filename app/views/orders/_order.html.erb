@@ -1,0 +1,30 @@
+<div class="col s4 m4">
+  <div class="card blue-grey darken-1">
+    <div class="card-content white-text">
+      <div>
+        <span class="card-title">
+        <%= order.order_code %>
+      </span>
+      <% unless order.rejected? %>
+        <%= link_to order_path(order, status: :rejected), method: :put,
+          class: "btn-flat waves-effect waves-teal white-text tooltipped update-order",
+          data: {tooltip: I18n.t(".reject"),
+          confirm: t(".sure_delete")}, remote: true do %>
+          <i class="material-icons">clear</i>
+        <% end %>
+      <% end %>
+      </div>
+      <span class="right white-text badge red">
+        <%= Suggest.human_enum_name :status, order.status %>
+      </span>
+      <p><strong><%= t "orders.new.total" %>:</strong> <%= order.total_pay %></p>
+      <p><strong><%= t ".phone" %>:</strong> <%= order.phone %></p>
+      <p><strong><%= t ".shipping_address" %>:</strong> <%= order.shipping_address %></p>
+    </div>
+    <div class="card-action center">
+      <a href="#"><i class="material-icons">alarm</i>
+        <%= convert_datetime order.created_at %>
+      </a>
+    </div>
+  </div>
+</div>

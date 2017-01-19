@@ -39,6 +39,7 @@ en:
   rejected: "Reject"
   welcome: "Welcome"
   quantity_error: "Quantity has to be a positive number"
+  reject: "Reject"
   time:
     formats:
       date_format: "%m - %d - %Y"
@@ -49,17 +50,30 @@ en:
       q_err: "Not enough item(s)"
       orders_create_successfully: "Successfully ordered!"
       add_requir: "Address is required"
+    index:
+      title: "Order history"
+    order:
+      phone: "Phone"
+      shipping_address: "Shipping address"
+      sure_delete: "Are you sure to cancel this order? (Canceled order cannot be recovered)"
     new:
       checkout: "Confirm now"
       total: "Total pay"
       your_cart: "Your cart"
       customer_info: "Customer info"
+    update:
+      update_success: "Cancelled order successfully!"
+      update_fail: "Failed to cancel order!"
   activerecord:
     attributes:
       suggest:
         statuses:
           processing: "Processing..."
           accepted: "Accepted"
+          rejected: "Rejected"
+          in_progress: "In progress"
+          shipping: "Shipping"
+          delivered: "Delivered"
           rejected: "Rejected"
   pages:
     home:
