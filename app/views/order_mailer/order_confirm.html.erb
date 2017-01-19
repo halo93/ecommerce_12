@@ -1,0 +1,24 @@
+<div>
+  <table class="table-cart">
+    <thead>
+      <tr>
+        <th><%= t ".code" %></th>
+        <th><%= t ".name" %></th>
+        <th><%= t ".price" %>($)</th>
+        <th><%= t ".quantity" %></th>
+        <th><%= t ".total_price" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @order.order_details.each do |order_detail| %>
+        <tr>
+          <td><%= order_detail.product.product_code %></td>
+          <td><%= order_detail.product_name %></td>
+          <td><%= order_detail.price %></td>
+          <td><%= order_detail.quantity %></td>
+          <td><%= order_detail.price * order_detail.quantity %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

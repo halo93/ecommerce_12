@@ -21,6 +21,7 @@ class OrdersController < ApplicationController
     if @order.update_order! @session_cart,
       params[:address], params[:phone]
       flash[:success] = t ".orders_create_successfully"
+      OrderMailer.delay.order_confirm(@order, @user)
       redirect_to root_path
     else
       flash[:danger] = params[:address].empty? ? t(".add_requir") : t(".q_err")

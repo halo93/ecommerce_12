@@ -43,6 +43,9 @@ gem "friendly_id"
 gem "social-share-button"
 gem "roo"
 gem "ratyrate"
+gem "whenever"
+gem "delayed_job_active_record"
+gem "figaro"
 
 group :development, :test do
   gem "byebug", platform: :mri
