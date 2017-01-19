@@ -36,6 +36,7 @@ jp:
   rejected: "拒否された"
   welcome: "ようこそ"
   quantity_error: "数量は正の数でなければならない"
+  reject: "拒否された"
   time:
     formats:
       date_format: "%m - %d - %Y"
@@ -51,17 +52,30 @@ jp:
       q_err: "在庫が十分ではありません"
       orders_create_successfully: "正常に命じ!"
       add_requir: "アドレスが必要です"
+    index:
+      title: "注文履歴"
+    order:
+      phone: "電話番号"
+      shipping_address: "お届け先の住所"
+      sure_delete: "この注文をキャンセルしてもよろしいですか？（キャンセルされた注文は回収できません）"
     new:
       checkout: "今すぐ確認してください"
       total: "総支払額"
       your_cart: "あなたのショッピングカート"
       customer_info: "顧客情報"
+    update:
+      update_success: "注文をキャンセルしました！"
+      update_fail: "注文をキャンセルできませんでした。"
   activerecord:
     attributes:
       suggest:
         statuses:
           processing: "処理..."
           accepted: "受け入れられた"
+          rejected: "拒否された"
+          in_progress: "進行中"
+          shipping: "運送"
+          delivered: "届いた"
           rejected: "拒否された"
   pages:
     home:

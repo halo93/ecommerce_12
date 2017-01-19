@@ -1,6 +1,14 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!, :load_user
-  before_action :load_cart, :load_order
+  before_action :load_cart, :load_order, only: [:create, :new]
+  load_resource only: :update
+
+  def index
+    params[:limit] ||= Settings.show_limit.show_6
+    @search = @user.orders.ransack params[:q]
+    @orders = @user.orders.order_by_creation_time_desc
+      .page(params[:page]).per params[:limit].to_i
+  end
 
   def new
     @product_carts = @session_cart.map do |id, cart_params|
@@ -20,6 +28,17 @@ class OrdersController < ApplicationController
     end
   end
 
+  def update
+    unless order_params.nil?
+      if @order.update_attributes order_params
+        flash[:success] = t ".update_success"
+      else
+        flash[:notice] = t ".update_fail"
+      end
+      redirect_back fallback_location: :back
+    end
+  end
+
   private
   def load_user
     @user = current_user
@@ -34,5 +53,9 @@ class OrdersController < ApplicationController
   def load_cart
     @session_cart = session[:cart]
     redirect_to root_url if @session_cart.blank?
+  end
+
+  def order_params
+    params.permit :id, :status
   end
 end

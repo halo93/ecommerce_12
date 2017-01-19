@@ -55,9 +55,15 @@
             <div class="divider"></div>
             <%= link_to (t "suggest"), suggests_path %>
             <div class="divider"></div>
+            <%= link_to (t ".order_history"), orders_path %>
+            <div class="divider"></div>
             <%= link_to (t "signout"), destroy_user_session_path, method: :delete %>
           </li>
         </ul>
+      <% else %>
+        <li>
+          <%= link_to t("devise.sessions.new.login"), new_user_session_path %>
+        </li>
       <% end %>
       <li>
         <a class="dropdown-button" id="shopping-cart" data-activates="dropdown2"

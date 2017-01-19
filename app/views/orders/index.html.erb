@@ -1,0 +1,23 @@
+<% provide :title, t(".title") %>
+<h2 class="center"><i class="material-icons small">
+  assignment_turned_in</i> <%= t ".title" %>
+</h2>
+<div class="row">
+  <div class="col s10 m2">
+    <%= search_form_for @search, url: orders_path do |f|%>
+        <label><%= t "display" %></label>
+        <%= select_tag :limit,
+          options_from_collection_for_select(Settings.show_limit,
+          :second, :second, selected: params[:limit] || Settings.show_limit.limit),
+          id: "show-limit", style: "display: block" %>
+        <%= f.submit "", style: "display: none" %>
+        <label><%= t "records" %></label>
+    <% end %>
+  </div>
+</div>
+<div class="row" id="orders">
+  <%= render @orders %>
+</div>
+<div id="paginator">
+  <%= paginate @orders, remote: true %>
+</div>

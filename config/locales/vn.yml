@@ -41,6 +41,7 @@ vn:
   rejected: "Từ chối"
   welcome: "Xin chào"
   quantity_error: "Số lượng sản phẩm phải là số "
+  reject: "Hủy đơn"
   time:
     formats:
       date_format: "%d - %m - %Y"
@@ -50,17 +51,30 @@ vn:
       q_err: "Không đủ số lượng trong kho"
       orders_create_successfully: "Đặt hàng thành công!"
       add_requir: "Địa chỉ không được bỏ trống"
+    index:
+      title: "Lịch sử đặt hàng"
+    order:
+      phone: "Điện thoại"
+      shipping_address: "Địa chỉ giao hàng"
+      sure_delete: "Bạn có muốn hủy đơn hàng này? (Chú ý: Không thể phục hồi đơn hàng đã hủy)"
     new:
       checkout: "Xác nhận thanh toán"
       total: "Tổng giá trị hóa đơn"
       your_cart: "Giỏ hàng của bạn"
       customer_info: "Thông tin khách hàng"
+    update:
+      update_success: "Hủy đơn hàng thành công!"
+      update_fail: "Hủy đơn hàng thất b!"
   activerecord:
     attributes:
       suggest:
         statuses:
           processing: "Processing..."
           accepted: "Accepted"
+          rejected: "Rejected"
+          in_progress: "In progress"
+          shipping: "Shipping"
+          delivered: "Delivered"
           rejected: "Rejected"
   pages:
     home:
