@@ -7,6 +7,13 @@ class ProductsController < ApplicationController
       @recent_products = session[:recent]
         .map{|id| Product.find_by(id: id)}.reverse
     end
+    @search = Product.ransack params[:q]
+    @q = Product.search params[:q]
+    @products = @q.result(distinct: true).page(params[:page])
+      .per Settings.show_limit.show_6
+    if request.xhr?
+      render partial: "product", collection: @products
+    end
   end
 
   def show

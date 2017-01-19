@@ -32,9 +32,9 @@
           <%= t "pages.help.title" %>
         </a>
       </li>
-      <li class="tab-nav <%= active_class "/#{I18n.locale}/pages/about" %>">
-        <a href="<%= "/#{I18n.locale}/pages/about" %>">
-          <%= t "pages.about.title" %>
+      <li class="tab-nav <%= active_class products_path %>">
+        <a href="<%= products_path %>">
+          <%= t "pages.product.title" %>
         </a>
       </li>
       <% if user_signed_in? %>

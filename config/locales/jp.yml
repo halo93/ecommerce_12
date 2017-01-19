@@ -59,9 +59,8 @@ jp:
     help:
       title: "ヘルプページ"
       content: "これは私たちのヘルプページです"
-    about:
-      title: "紹介ページ"
-      content: "これは私たちの紹介ページです"
+    product:
+      title: "製品"
   layouts:
     footer:
       suggest_title: "製品を提案する"
@@ -94,6 +93,10 @@ jp:
     index:
       all_products: "すべての製品"
       recent_view: "最近の見方"
+      search: "サーチ"
+      name: "名"
+      from: "から"
+      to: "に"
     show:
       description: "説明"
       review: "レビュー"
