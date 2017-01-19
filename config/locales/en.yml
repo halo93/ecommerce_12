@@ -47,6 +47,7 @@ en:
   total_pay: "Total Pay"
   shipping_address: "Shipping Address"
   phone: "Phone"
+  monthly_report: "Monthly reports"
   time:
     formats:
       date_format: "%m - %d - %Y"

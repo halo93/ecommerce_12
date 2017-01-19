@@ -18,3 +18,8 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+set :environment, "development"
+set :output,  ".../log.log"
+every "0 0 28 * *" do
+  rake "job:mailmonth"
+end

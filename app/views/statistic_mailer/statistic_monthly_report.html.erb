@@ -1,0 +1,23 @@
+<h3><%= t "monthly_report" %></h3>
+<% @orders.each do |order| %>
+  <table>
+    <thead>
+      <tr>
+        <th><%= t ".code" %></th>
+        <th><%= t ".user" %></th>
+        <th><%= t ".address" %></th>
+        <th><%= t ".phone" %></th>
+        <th><%= t ".total_price" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= order.order_code %></td>
+        <td><%= order.user_name %></td>
+        <td><%= order.shipping_address %></td>
+        <td><%= order.phone %></td>
+        <td><%= number_to_currency order.total_pay %></td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>
