@@ -40,6 +40,7 @@ en:
   welcome: "Welcome"
   quantity_error: "Quantity has to be a positive number"
   reject: "Reject"
+  order_confirm: "Confirm order email"
   time:
     formats:
       date_format: "%m - %d - %Y"
@@ -260,4 +261,11 @@ en:
         title: "Suggests list"
         name_or_content: "Title or Content contains"
         search: "Search"
+  order_mailer:
+    order_confirm:
+      code: "Product code"
+      name: "Product name"
+      quantity: "Quantity"
+      price: "Price"
+      total_price: "Total price"
 

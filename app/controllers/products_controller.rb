@@ -10,9 +10,7 @@ class ProductsController < ApplicationController
     @q = Product.search params[:q]
     @products = @q.result(distinct: true).page(params[:page])
       .per Settings.show_limit.show_6
-    if request.xhr?
-      render partial: "product", collection: @products
-    end
+    render partial: "product", collection: @products if request.xhr?
   end
 
   def show
