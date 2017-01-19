@@ -1,4 +1,5 @@
 <div class="col s12 m4" id="<%= product.name %>">
+  <span style="display: none" id="in-stock-<%= product.id %>"><%= product.in_stock %></span>
   <div class="card small">
     <div class="card-image">
       <%= image_tag product.image.present? ? product.image : "default.jpg" %>
@@ -10,9 +11,15 @@
       <%= link_to product_path(product) do %>
         <i class="material-icons">search</i>
       <% end %>
-      <%= link_to "", id: "add-cart-#{product.id}", data: product.id, class: "add-to-cart" do %>
-        <i class="material-icons">add_shopping_cart</i>
-      <% end %>
+      <% if product.in_stock > 0 %>
+        <%= link_to "", id: "add-cart-#{product.id}", data: product.id, class: "add-to-cart" do %>
+          <i class="material-icons">add_shopping_cart</i>
+        <% end %>
+      <% else %>
+        <a class="btn disabled" data-tooltip="abc">
+          <i class="material-icons">add_shopping_cart</i> <%= t ".out_of_stock" %>
+        </a>
+       <% end %>
     </div>
   </div>
 </div>

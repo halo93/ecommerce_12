@@ -25,10 +25,12 @@ $(document).on('turbolinks:load', function () {
   });
   var data = {};
   $('.cart-quantity').each(function(){
-    $(this).bind('keyup change click', function (e) {
-      e.preventDefault();
-      var id = $(this).attr('data');
-      var quantity = parseInt($('#quantity-' + id).val(), 10);
+    var id = $(this).attr('data');
+    var quantity = parseInt($('#quantity-' + id).val(), 10);
+    data[id] = quantity;
+    $(this).bind('keyup change click', function () {
+      id = $(this).attr('data');
+      quantity = parseInt($('#quantity-' + id).val(), 10);
       var price = parseFloat($('#price-' + id).text().trim());
       if(isNaN(quantity * price)){
         $('#total-' + id).text(0);
@@ -37,5 +39,30 @@ $(document).on('turbolinks:load', function () {
       }
       data[id] = quantity;
     });
+  });
+
+  $('#update-cart').click(function(){
+    var flag = true;
+    $.each(data, function (key,value) {
+      if(value <= 0){
+        alert(I18n.t("quantity_error"));
+        $('#quantity-' + key).val(1);
+        flag = false;
+        return;
+      }
+    });
+    if(flag == true){
+      if(Object.keys(data).length != 0){
+        $.ajax({
+          url: '/cart/',
+          data: {
+            cart: data
+          },
+          method: 'PATCH',
+          success: function(result){
+          }
+        });
+      }
+    }
   });
 });

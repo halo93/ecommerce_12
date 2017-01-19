@@ -38,11 +38,22 @@ en:
   accepted: "Accept"
   rejected: "Reject"
   welcome: "Welcome"
+  quantity_error: "Quantity has to be a positive number"
   time:
     formats:
       date_format: "%m - %d - %Y"
       date_time: "%m/%d/%Y %H:%M"
   textarea: "Description"
+  orders:
+    create:
+      q_err: "Not enough item(s)"
+      orders_create_successfully: "Successfully ordered!"
+      add_requir: "Address is required"
+    new:
+      checkout: "Confirm now"
+      total: "Total pay"
+      your_cart: "Your cart"
+      customer_info: "Customer info"
   activerecord:
     attributes:
       suggest:
@@ -100,6 +111,8 @@ en:
       text_hint: "Enter your comment..."
       comment: "Add your comment: "
       comment_btn: "Comment"
+    product:
+      out_of_stock: "Out of stock"
   comments:
     comment:
       commented: "commented "

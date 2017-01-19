@@ -8,3 +8,5 @@ show_limit:
   show_30: 30
   show_36: 36
 recent_items: 4
+bill: "B"
+bill_date: "%Y%m%d%H%M%S"

@@ -35,6 +35,7 @@ jp:
   accepted: "受け入れられた"
   rejected: "拒否された"
   welcome: "ようこそ"
+  quantity_error: "数量は正の数でなければならない"
   time:
     formats:
       date_format: "%m - %d - %Y"
@@ -45,6 +46,16 @@ jp:
     formats:
       date_format: "%m - %d - %Y"
       date_time: "%m/%d/%Y %H:%M"
+  orders:
+    create:
+      q_err: "在庫が十分ではありません"
+      orders_create_successfully: "正常に命じ!"
+      add_requir: "アドレスが必要です"
+    new:
+      checkout: "今すぐ確認してください"
+      total: "総支払額"
+      your_cart: "あなたのショッピングカート"
+      customer_info: "顧客情報"
   activerecord:
     attributes:
       suggest:
@@ -102,6 +113,8 @@ jp:
       text_hint: "あなたのコメントを入力してください..."
       comment: "あなたのコメントを追加: "
       comment_btn: "コメント"
+    product:
+      out_of_stock: "在庫切れ"
   comments:
     comment:
       commented: "コメントした "
