@@ -16,7 +16,7 @@
   </div>
   <div class="col s12 m10 right">
     <div class="row">
-      <%= search_form_for @q, url: admin_orders_path do |f| %>
+      <%= search_form_for @q, url: admin_orders_path, id: "order_search_q" do |f| %>
         <div class="col s12 m8">
           <%= f.label :order_code_or_user_name_cont, t(".code_or_name") %>
           <%= f.text_field :order_code_or_user_name_cont %>
@@ -26,9 +26,15 @@
             Order.statuses.to_a.map{|m| [m[0].humanize, m[1]]},
             {include_blank: t(".select-status")},
             {class: "select-status input-field select-order-stt", autofocus: true} %>
-          <%= f.submit t("products.index.search"), class: "waves-effect waves-light btn right" %>
-        </div>
+        <%= f.submit t("products.index.search"), class: "waves-effect waves-light btn right" %>
       <% end %>
+          <%= link_to admin_orders_path(params.require(:q).
+              permit(:order_code_or_user_name_cont, :status_eq).merge(format: :xls)),
+            class: "btn waves-effect waves-light tooltipped",
+            data: {tooltip: t(".export_xls")} do %>
+            <i class="material-icons">file_download</i>
+          <% end %>
+        </div>
     </div>
   </div>
 </div>
