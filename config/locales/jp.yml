@@ -274,6 +274,7 @@ jp:
       index:
         title: "オーダーリスト"
         code_or_name: "注文コードまたは顧客名が含まれています"
+        export_xls: "エクセルにエクスポートする"
       order:
         phone: "電話"
         shipping_address: "お届け先の住所"

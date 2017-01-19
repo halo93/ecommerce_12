@@ -41,6 +41,12 @@ en:
   quantity_error: "Quantity has to be a positive number"
   reject: "Reject"
   order_confirm: "Confirm order email"
+  id: "ID"
+  order_code: "Order Code"
+  status: "Status"
+  total_pay: "Total Pay"
+  shipping_address: "Shipping Address"
+  phone: "Phone"
   time:
     formats:
       date_format: "%m - %d - %Y"
@@ -265,6 +271,7 @@ en:
       index:
         title: "Orders list"
         code_or_name: "Order code or customer name contains"
+        export_xls: "Export to excel"
       order:
         phone: "Phone"
         shipping_address: "Shipping Address"

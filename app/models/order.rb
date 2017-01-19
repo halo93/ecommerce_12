@@ -46,6 +46,19 @@ class Order < ApplicationRecord
     end
   end
 
+  def self.to_xls records = [], options = {}
+    CSV.generate options do |csv|
+      csv << [I18n.t("id"), I18n.t("order_code"), I18n.t("status"),
+        I18n.t("total_pay"), I18n.t("shipping_address"), I18n.t("phone"),
+        I18n.t("admin.categories.index.created_at"),
+        I18n.t("admin.orders.order.updated_at")]
+      records.each do |order|
+        csv << [order.id, order.order_code, order.status, order.total_pay,
+          order.shipping_address, order.phone, order.created_at, order.updated_at]
+      end
+    end
+  end
+
   private
   def init_status_order
     self[:status] = :in_progress

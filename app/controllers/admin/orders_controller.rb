@@ -1,14 +1,26 @@
 class Admin::OrdersController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource except: :index
   before_action :authenticate_user!, :verify_admin
   layout "admin"
 
   def index
     params[:limit] ||= Settings.show_limit.show_6
+    if params[:q].nil?
+      params[:q] = {
+        "order_code_or_user_name_cont" => params[:order_code_or_user_name_cont],
+        "status_eq" => params[:status_eq]
+      }
+    end
     @search = Order.ransack params[:q]
     @q = Order.search params[:q]
-    @orders = @q.result(distinct: true)
-      .order_by_updated_time.page(params[:page]).per params[:limit].to_i
+    @orders_all = @q.result(distinct: true)
+      .order_by_updated_time
+    respond_to do |format|
+      format.html do
+        @orders = @orders_all.page(params[:page]).per params[:limit].to_i
+      end
+      format.xls{send_data Order.to_xls @orders_all}
+    end
   end
 
   def update
