@@ -1,0 +1,19 @@
+<tr>
+  <td><%= product.product_code %></td>
+  <td>
+    <%= link_to product.name, product_path(product) %>
+  </td>
+  <td>
+    <%= image_tag product.image, class: "materialboxed",
+      data: {caption: product.description}, size: "50x50" %>
+  </td>
+  <td class="cart-product-price-<%= product.id %>">
+    <%= product.price %>
+  </td>
+  <td>
+    <%= cart_params["quantity"] %>
+  </td>
+  <td>
+    <%= calc_price_of_order_detail product, cart_params["quantity"] %>
+  </td>
+</tr>

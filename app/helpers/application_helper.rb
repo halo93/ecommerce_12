@@ -12,6 +12,10 @@ module ApplicationHelper
     current_page?(link_path) ? "active" : ""
   end
 
+  def calc_price_of_order_detail product, quantity
+    product.price * quantity.to_i
+  end
+
   def active_class_admin link_path
     current_page?(link_path) ? "grey white-text darken-3" : ""
   end

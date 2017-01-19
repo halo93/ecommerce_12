@@ -34,7 +34,7 @@
           </td>
           <td>
             <p id="total-<%= product.id %>">
-              <%= product.price * in_cart["quantity"] %>
+              <%= calc_price_of_order_detail product, in_cart["quantity"] %>
             </p>
           </td>
           <td>
@@ -53,7 +53,7 @@
 <br>
 <div class="right">
   <% if @product_carts.size > 0 %>
-    <%= link_to t(".next"), new_order_path,
+    <%= link_to t(".next"), {},
       class: "btn", id: "update-cart" %>
     <%= link_to t(".buy_more"), products_path,
       class: "btn" %>

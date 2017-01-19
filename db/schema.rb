@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170116061324) do
+ActiveRecord::Schema.define(version: 20170118152214) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 20170116061324) do
     t.integer  "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float    "price"
     t.index ["order_id"], name: "index_order_details_on_order_id"
     t.index ["product_id"], name: "index_order_details_on_product_id"
   end
@@ -97,6 +98,7 @@ ActiveRecord::Schema.define(version: 20170116061324) do
     t.integer  "coupon_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.string   "phone"
     t.index ["coupon_id"], name: "index_orders_on_coupon_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
@@ -179,6 +181,7 @@ ActiveRecord::Schema.define(version: 20170116061324) do
     t.string   "provider"
     t.string   "uid"
     t.integer  "role"
+    t.string   "phone"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

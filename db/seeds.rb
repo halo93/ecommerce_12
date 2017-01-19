@@ -5,8 +5,10 @@ User.create! email: "admin@gmail.com", password: "123456",
   name  = FFaker::Name.name
   email = "example-#{n + 1}@framgia.com"
   password = "password"
+  phone = FFaker::PhoneNumber.phone_number
   User.create! name: name,
     email: email,
+    phone: phone,
     password: password,
     password_confirmation: password,
     role: 1

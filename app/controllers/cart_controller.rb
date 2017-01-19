@@ -1,7 +1,9 @@
 class CartController < ApplicationController
   def index
     @cart = session[:cart] ? session[:cart] : {}
-    @product_carts = @cart.map{|id, product| [Product.find_by(id: id), product]}
+    @product_carts = @cart.map do |id, cart_params|
+      [Product.find_by(id: id), cart_params]
+    end
   end
 
   def create
@@ -14,11 +16,19 @@ class CartController < ApplicationController
       cart[id]["quantity"] = cart[id]["quantity"].to_i + 1
     else
       quantity = 1
-      cart[id] = {"quantity" => quantity, "name" => name, "image_url" => image_url}
+      cart[id] = {
+        "quantity" => quantity, "name" => name, "image_url" => image_url
+      }
     end
     respond_to do |format|
       format.html{render partial: "cart_item", locals: {cart: cart}}
     end
+  end
+
+  def update
+    data = params["cart"]
+    data.each{|key, value| session[:cart][key]["quantity"] = value}
+    redirect_to new_order_path
   end
 
   def destroy

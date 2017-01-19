@@ -40,10 +40,21 @@ vn:
   accepted: "Đồng ý"
   rejected: "Từ chối"
   welcome: "Xin chào"
+  quantity_error: "Số lượng sản phẩm phải là số "
   time:
     formats:
       date_format: "%d - %m - %Y"
       date_time: "%d/%m/%Y %H:%M"
+  orders:
+    create:
+      q_err: "Không đủ số lượng trong kho"
+      orders_create_successfully: "Đặt hàng thành công!"
+      add_requir: "Địa chỉ không được bỏ trống"
+    new:
+      checkout: "Xác nhận thanh toán"
+      total: "Tổng giá trị hóa đơn"
+      your_cart: "Giỏ hàng của bạn"
+      customer_info: "Thông tin khách hàng"
   activerecord:
     attributes:
       suggest:
@@ -111,6 +122,8 @@ vn:
       text_hint: "Nội dung đánh giá..."
       comment: "Đánh giá sản phẩm: "
       comment_btn: "Gửi"
+    product:
+      out_of_stock: "Hết hàng"
   comments:
     comment:
       commented: "đánh giá "

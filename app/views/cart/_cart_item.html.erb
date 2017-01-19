@@ -5,7 +5,7 @@
         <div class="card-panel grey lighten-5">
           <div class="row valign-wrapper">
             <div class="col s12 center">
-              <span><%= t ".cart_empty" %></span>
+              <span><%= t "layouts.header.cart_empty" %></span>
             </div>
           </div>
         </div>
@@ -25,7 +25,7 @@
               <div class="col s10">
                 <span class="black-text cart-desc"><%= value["name"] %></span>
                 <span class="badge right grey white-text">
-                <%= value["quantity"] %> <%= t ".items" %>
+                <%= value["quantity"] %> <%= t "layouts.header.items" %>
               </span>
               </div>
             </div>
@@ -39,7 +39,7 @@
         <div class="card-pane checkout-cart">
           <div class="row valign-wrapper">
             <div class="col s12 center">
-              <%= link_to t(".index_cart"), cart_path %>
+              <%= link_to t("layouts.header.index_cart"), cart_path %>
             </div>
           </div>
         </div>
