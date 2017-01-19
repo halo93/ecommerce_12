@@ -296,6 +296,14 @@ vn:
       update:
         update_success: "Cập nhật trạng thái đơn hàng thành công"
         update_fail: "Cập nhật trg thái đơn hàng thất bại"
+        update_fail: "Cập nhật trạng thái đơn hàng thất bại"
+    charts:
+      index:
+        title: "Dashboard"
+        statistics: "Thống kê"
+        users: "Số lượng người dùng trong 1 tuần"
+        orders: "Thống kê đơn hàng trong 1 tuần"
+        income: "Thu nhập 10 ngày gần đây"
   datetime:
     distance_in_words:
       x_days:

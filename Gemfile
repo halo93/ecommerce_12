@@ -46,6 +46,8 @@ gem "ratyrate"
 gem "whenever"
 gem "delayed_job_active_record"
 gem "figaro"
+gem "chartkick"
+gem "groupdate", github: "ankane/groupdate", branch: "sqlite"
 
 group :development, :test do
   gem "byebug", platform: :mri

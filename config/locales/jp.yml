@@ -283,6 +283,13 @@ jp:
       update:
         update_success: "注文のステータスが更新されました"
         update_fail: "注文のステータスの更新に失敗しました"
+    charts:
+      index:
+        title: "ダッシュボード"
+        statistics: "統計"
+        users: "週のユーザー統計"
+        orders: "週に統計を注文する"
+        income: "過去10日間の収入"
   datetime:
     distance_in_words:
       x_days:
