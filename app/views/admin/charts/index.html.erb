@@ -1,0 +1,16 @@
+<% provide :title, t(".title") %>
+<h2 class="center-align"><%= t ".statistics" %></h2>
+<div class="row">
+  <div class="col sm12 m6">
+    <%= column_chart @user_statistic %>
+    <p><%= t ".users" %></p>
+  </div>
+  <div class="col sm12 m6">
+    <%= line_chart @orders_statistic %>
+    <p><%= t ".orders" %></p>
+  </div>
+  <div class="col sm12 m6">
+    <%= area_chart @income, colors: ["pink", "#999"] %>
+    <p><%= t ".income" %></p>
+  </div>
+</div>

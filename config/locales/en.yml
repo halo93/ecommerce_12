@@ -280,6 +280,13 @@ en:
       update:
         update_success: "Order's status updated"
         update_fail: "Fail to update order's status"
+    charts:
+      index:
+        title: "Dashboard"
+        statistics: "Statistics"
+        users: "User statistics in week"
+        orders: "Orders statistics in week"
+        income: "Income in last ten days"
   order_mailer:
     order_confirm:
       code: "Product code"

@@ -5,12 +5,13 @@ Rails.application.routes.draw do
   }
   scope "(:locale)", locale: /en|vn|jp/ do
     namespace :admin do
-      root "categories#index"
+      root "charts#index"
       resources :categories
       resources :products
       resources :users
       resources :suggests
       resources :orders
+      resources :charts, only: :index
       resources :products do
         collection{post :import}
       end

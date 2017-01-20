@@ -19,6 +19,8 @@
 //= require i18n.js
 //= require i18n/translations
 //= require social-share-button
+//= require Chart.bundle
+//= require chartkick
 //= require_tree .
 
 $(document).on('turbolinks:load', function() {
