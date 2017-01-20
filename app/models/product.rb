@@ -57,6 +57,16 @@ class Product < ApplicationRecord
     end
   end
 
+  def self.hot_trend
+    date = Time.now - Settings.start_day.day
+    product_ids = "select order_details.product_id
+       from order_details
+       where (date(order_details.created_at) > '#{date}')
+       group by order_details.product_id
+       order by sum(order_details.quantity)"
+    Product.where("id IN (#{product_ids})")
+  end
+
   def product_code
     cate_code = "#{self.category.name.first(3).upcase}-#{self.category.id}"
     last_record = self.category.products.last

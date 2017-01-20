@@ -80,7 +80,7 @@ jp:
   pages:
     home:
       title: "ホームページ"
-      content: "これは私たちのホームページです"
+      content: "ペットギフトボックスへようこそ"
     help:
       title: "ヘルプページ"
       content: "これは私たちのヘルプページです"
@@ -246,6 +246,10 @@ jp:
       destroy:
         product_deleted: "正常に削除された製品"
         fail_to_delete: "この製品を削除しない"
+      import:
+        fail_to_import: "製品のインポートに失敗する"
+        fail_exist: "製品のインポートに失敗する：製品が存在する"
+        imported: "製品を正常にインポートする"
     users:
       index:
         title: "ユーザーリスト"
@@ -270,6 +274,11 @@ jp:
         title: "リストを提案する"
         name_or_content: "タイトルまたは内容が含まれています"
         search: "サーチ"
+      suggest:
+        sure: "この提案のステータスを変更してもよろしいですか？"
+      update:
+        update_success: "正常に更新された提案"
+        update_fail: "提案の更新に失敗する"
     orders:
       index:
         title: "オーダーリスト"

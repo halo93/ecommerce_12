@@ -86,7 +86,7 @@ en:
   pages:
     home:
       title: "Home"
-      content: "This is our home page"
+      content: "Welcome to Pet GiftBox"
     help:
       title: "Help"
       content: "This is our help page"
@@ -122,7 +122,7 @@ en:
   suggest: "Suggests list"
   products:
     index:
-      all_products: "All products"
+      all_products: "All products in category: "
       recent_view: "Recent views"
       search: "Search"
       name: "Name"
@@ -171,6 +171,7 @@ en:
         view: "View"
         delete: "Delete"
         product_count: "Product Count"
+        created_at: "Created at"
       create:
         create_success: "Create category success"
         create_fail: "Create category fail"
@@ -250,6 +251,10 @@ en:
       destroy:
         product_deleted: "Successfully deleted product"
         fail_to_delete: "Fail to delete this product"
+      import:
+        fail_to_import: "Fail to import product"
+        fail_exist: "Fail to import product: Product exists"
+        imported: "Import product successfully"
     users:
       index:
         title: "Users list"
@@ -268,6 +273,11 @@ en:
         title: "Suggests list"
         name_or_content: "Title or Content contains"
         search: "Search"
+      suggest:
+        sure: "Are you sure to change the status of this suggestion?"
+      update:
+        update_success: "Successfully updated suggest"
+        update_fail: "Fail to update suggest"
     orders:
       index:
         title: "Orders list"

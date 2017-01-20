@@ -6,11 +6,9 @@ class ProductsController < ApplicationController
       @recent_products = session[:recent]
         .map{|id| Product.find_by(id: id)}.reverse
     end
-    @search = Product.ransack params[:q]
-    @q = Product.search params[:q]
-    @products = @q.result(distinct: true).page(params[:page])
-      .per Settings.show_limit.show_6
-    render partial: "product", collection: @products if request.xhr?
+    @newest_products = Product.order_by_creation_time_desc.
+      limit Settings.show_limit.show_6
+    @hot_trend_products = Product.hot_trend.limit Settings.show_limit.show_6
   end
 
   def show

@@ -10,3 +10,4 @@ show_limit:
 recent_items: 4
 bill: "B"
 bill_date: "%Y%m%d%H%M%S"
+start_day: 5

@@ -25,6 +25,21 @@
 
 $(document).on('turbolinks:load', function() {
   $('.modal').modal();
+  $('.carousel').carousel();
+
+  function autoplay() {
+    $('.carousel').carousel('next');
+  }
+
+  $(function() {
+    var interval = setInterval(autoplay, 4000);
+    $('.carousel-item').hover(function() {
+      clearInterval(interval);
+    }, function() {
+      interval = setInterval(autoplay, 4000);
+    });
+  });
+
   $(function(){
     $('#show-limit').on('change', function(){
       $(this).closest('form').trigger('submit');
@@ -35,5 +50,11 @@ $(document).on('turbolinks:load', function() {
     $('.admin-update-order').on('change', function(){
       $(this).closest('form').trigger('submit');
     });
+  });
+
+  $('.carousel-item').each(function(){
+    $(this).click(function(e){
+      e.preventDefault();
+    })
   });
 });

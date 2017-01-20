@@ -32,10 +32,11 @@
           <%= t "pages.help.title" %>
         </a>
       </li>
-      <li class="tab-nav <%= active_class products_path %>">
-        <a href="<%= products_path %>">
-          <%= t "pages.product.title" %>
+      <li class="tab-nav">
+        <a class="dropdown-button" data-beloworigin="true" data-activates="dropdown-nav">
+          <%= t ".categories" %> <i class="material-icons right">arrow_drop_down</i>
         </a>
+        <%= raw load_categories_menu %>
       </li>
       <% if user_signed_in? %>
         <li>

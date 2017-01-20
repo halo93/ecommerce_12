@@ -85,7 +85,7 @@ vn:
   pages:
     home:
      title: "Trang chủ"
-     content: "Đây là trang chủ"
+     content: "Pet GiftBox xin kính chào quý khách hàng"
     help:
       title: "Trợ giúp"
       content: "Đây là trang trợ giúp"
@@ -128,7 +128,7 @@ vn:
   suggest: "Danh sách gợi ý"
   products:
     index:
-      all_products: "Tất cả sản phẩm"
+      all_products: "Tất cả sản phẩm trong danh mục: "
       recent_view: "Gần đây"
       search: "Tìm"
       name: "Tên"
@@ -259,6 +259,10 @@ vn:
       destroy:
         product_deleted: "Xóa sản phẩm thành công"
         fail_to_delete: "Xóa sản phẩm thất bại"
+      import:
+        fail_to_import: "Tải lên sản phẩm thất bại"
+        fail_exist: "Tải lên sản phẩm thất bại: Sản phẩm đã tồn tại"
+        imported: "Tải lên sản phẩm thành công"
     users:
       index:
         title: "Danh sách thành viên"
@@ -283,6 +287,11 @@ vn:
         title: "Danh sách gợi ý"
         name_or_content: "Tên hoặc nội dung có chứa"
         search: "Tìm kiếm"
+      suggest:
+        sure: "Bạn có muốn đổi trạng thái của yêu cầu này?"
+      update:
+        update_success: "Cập nhật trạng thái thành công"
+        update_fail: "Cập nhật trạng thái thất bại"
     orders:
       index:
         title: "Danh sách đơn hàng"
