@@ -1,5 +1,7 @@
 User.create! email: "admin@gmail.com", password: "123456",
   password_confirmation: "123456", name: "Do Ha Long", role: 0
+User.create! email: "kominam.2511@gmail.com", password: "foobar",
+  password_confirmation: "foobar", name: "Nam DV", role: 0
 
 20.times do |n|
   name  = FFaker::Name.name
