@@ -75,6 +75,4 @@ RSpec.configure do |config|
     # a real object. This is generally recommended.
     mocks.verify_partial_doubles = true
   end
-  # config.before(:all)  { FFaker::Random.seed=config.seed }
-  # config.before(:each) { FFaker::Random.reset! }
 end

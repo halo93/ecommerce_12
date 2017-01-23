@@ -8,8 +8,4 @@ class CallbacksController < ApplicationController
       redirect_to new_user_registration_url
     end
   end
-
-  def failure
-    redirect_to root_path
-  end
 end
