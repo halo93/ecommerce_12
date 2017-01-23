@@ -1,0 +1,26 @@
+<div class="row">
+  <h2><%= t "products.index.all_products" %> <%= @category.name %></h2>
+</div>
+<%= search_form_for @q, url: products_path do |f| %>
+  <div class="row">
+    <div class="col sm12 m8">
+      <%= f.label :name_cont, t("products.index.name") %>
+      <%= f.text_field :name_cont %>
+    </div>
+    <div class="col sm12 m2">
+      <%= f.label :price_gteq, t("products.index.from") %>
+      <%= f.number_field :price_gteq, min: 0 %>
+    </div>
+    <div class="col sm12 m2">
+      <%= f.label :price_lteq, t("products.index.to") %>
+      <%= f.number_field :price_lteq, min: 0 %>
+    </div>
+    <div class="col sm12 m2">
+      <%= f.submit t("products.index.search"), class: "btn right" %>
+    </div>
+  </div>
+<% end %>
+<div class="row" id="list">
+  <%= render @products %>
+</div>
+<%= paginate @products %>

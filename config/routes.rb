@@ -17,17 +17,17 @@ Rails.application.routes.draw do
       end
     end
     get "/pages/*page" => "pages#show"
-    root "pages#home"
     post "/rate", to: "rater#create", as: "rate"
     resources :suggests
     resources :products do
       resources :comments
     end
-    resources :users, :products, :orders
+    resources :users, :products, :orders, :categories
     get "/cart", to: "cart#index"
     delete "/cart/:id/delete", to: "cart#destroy"
     post "/cart/:id", to: "cart#create"
     patch "/cart", to: "cart#update"
     get "/cart/:id/edit", to: "cart#edit"
+    root "products#index"
   end
 end

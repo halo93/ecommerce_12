@@ -5,7 +5,7 @@
         <span class="card-title">
         <%= order.order_code %>
       </span>
-      <% unless order.rejected? %>
+      <% unless order.rejected? || order.delivered? %>
         <%= link_to order_path(order, status: :rejected), method: :put,
           class: "btn-flat waves-effect waves-teal white-text tooltipped update-order",
           data: {tooltip: I18n.t(".reject"),

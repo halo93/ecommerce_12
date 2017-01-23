@@ -18,8 +18,8 @@
           <td>
             <%= link_to product.name, product_path(product) %></td>
           <td>
-            <%= image_tag product.image, class: "materialboxed",
-              data: {caption: product.description}, size: "50x50" %>
+            <%= image_tag product.image.present? ? product.image : "default.jpg",
+              class: "materialboxed", size: "50x50", data: {caption: product.description} %>
           </td>
           <td>
             <p id="price-<%= product.id %>">

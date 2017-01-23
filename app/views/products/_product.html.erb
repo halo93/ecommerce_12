@@ -2,14 +2,18 @@
   <span style="display: none" id="in-stock-<%= product.id %>"><%= product.in_stock %></span>
   <div class="card small">
     <div class="card-image">
-      <%= image_tag product.image.present? ? product.image : "default.jpg" %>
+      <%= image_tag product.image.present? ? product.image : "default.jpg",
+        class: "materialboxed", data: {caption: product.description} %>
     </div>
     <div class="card-content">
-      <p class="center-align"><%= product.name %></p>
+      <p class="center-align">
+        <%= product.name %> | <%= number_to_currency product.price %> |
+          <%= product.in_stock %> <%= t "admin.products.index.in_stock" %>
+      </p>
     </div>
     <div class="card-action center">
       <%= link_to product_path(product) do %>
-        <i class="material-icons">search</i>
+        <i class="material-icons">visibility</i>
       <% end %>
       <% if product.in_stock > 0 %>
         <%= link_to "", id: "add-cart-#{product.id}", data: product.id, class: "add-to-cart" do %>
@@ -19,7 +23,7 @@
         <a class="btn disabled" data-tooltip="abc">
           <i class="material-icons">add_shopping_cart</i> <%= t ".out_of_stock" %>
         </a>
-       <% end %>
+      <% end %>
     </div>
   </div>
 </div>

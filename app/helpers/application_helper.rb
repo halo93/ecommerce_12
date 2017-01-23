@@ -35,4 +35,33 @@ module ApplicationHelper
   def convert_datetime date
     date.to_formatted_s :long
   end
+
+  def load_categories_menu
+    @tree = ""
+    tree Category.all
+  end
+
+  private
+  def tree categories, left = 0, right = nil, depth = -1
+    @tree += "<ul id='dropdown-nav' class='dropdown-content'>" if left == 0 && right == nil &&
+      depth == -1
+    categories.each do |category|
+      if category.lft > left && (right.nil? || category.rgt <
+          right) && category.depth == depth + 1
+        categories_temp = categories.compact
+        categories_temp.delete category
+        @tree += "<li>
+          <a href='/categories/#{category.id}' class='dropdown-button' data-activates='dropdown-subnav'>
+            #{category.name}</a>"
+        if category.rgt != (category.lft + 1)
+          @tree += "<ul class='dropdown-subnav' class='dropdown-content'>"
+          tree categories_temp, category.lft, category.rgt, category.depth
+          @tree += "</ul>"
+        end
+        @tree += "</li>"
+      end
+    end
+    @tree += "</ul>" if left == 0 && right.nil? && depth == -1
+    @tree
+  end
 end

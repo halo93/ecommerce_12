@@ -34,7 +34,7 @@
     </div>
     <div id="inbox" class="col s12"><%= @product.description %></div>
     <div id="unread" class="col s12">
-      <%= render "form_comment" %>
+      <%= render "form_comment" if user_signed_in? %>
       <div class="post_comment">
         <ul id="comments">
           <%= render @comments %>

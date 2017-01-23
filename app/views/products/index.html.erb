@@ -1,26 +1,38 @@
 <% provide :title, t(".all_products") %>
-<%= search_form_for @q, url: products_path do |f| %>
-  <div class="row">
-    <div class="col sm12 m8">
-      <%= f.label :name_cont, t(".name") %>
-      <%= f.text_field :name_cont %>
-    </div>
-    <div class="col sm12 m2">
-      <%= f.label :price_gteq, t(".from") %>
-      <%= f.number_field :price_gteq, min: 0 %>
-    </div>
-    <div class="col sm12 m2">
-      <%= f.label :price_lteq, t(".to") %>
-      <%= f.number_field :price_lteq, min: 0 %>
-    </div>
-      <%= f.submit t(".search"), class: "btn" %>
+<div class="carousel">
+  <div class="carousel-item" href="#one!">
+    <%= image_tag "chuc-mung-nam-moi-2017(2)__64035_zoom.jpg", class: "materialboxed" %>
   </div>
-<% end %>
-<div class="row" id="list">
-  <h1><%= t ".all_products" %></h1>
-  <%= render @products %>
+  <div class="carousel-item" href="#two!">
+    <%= image_tag "gio-qua-dep-ngay-tet.jpg", class: "materialboxed" %>
+  </div>
+  <div class="carousel-item" href="#three!">
+    <%= image_tag "huong_dan_cach_goi_gio_qua_tet_8.jpg", class: "materialboxed" %>
+  </div>
+  <div class="carousel-item" href="#four!">
+    <%= image_tag "gioqua5.jpg", class: "materialboxed" %>
+  </div>
+  <div class="carousel-item" href="#five!">
+    <%= image_tag "anh-chuc-tet-2017-4.jpg", class: "materialboxed" %>
+  </div>
+  <div class="carousel-fixed-item center">
+    <h2><%= t "pages.home.content" %></h2>
+  </div>
 </div>
-<%= paginate @products %>
+<div class="divider"></div>
+<div class="row">
+  <h2 class="title">
+    <%= t ".newest_giftbox" %>
+  </h2>
+  <%= render @newest_products %>
+</div>
+<div class="divider"></div>
+<div class="row">
+  <h2 class="title">
+    <%= t ".hot_trends" %>
+  </h2>
+  <%= render @hot_trend_products %>
+</div>
 <div class="row">
   <h2><%= t ".recent_view" %></h2>
   <% if @recent_products.present? %>

@@ -37,6 +37,7 @@ class Admin::ProductsController < ApplicationController
   def destroy
     if @product.destroy
       flash[:success] = t ".product_deleted"
+      session[:recent].delete @product.id
     else
       flash[:danger] = t ".fail_to_delete"
     end
