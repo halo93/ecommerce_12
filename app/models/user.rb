@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   ratyrate_rater
 
-  scope :admin_email,->(){self.select(:id, :email).where role: :admin}
+  scope :admin_email, ->(){self.select(:id, :email).where role: :admin}
 
   def self.from_omniauth auth
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|

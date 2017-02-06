@@ -8,9 +8,9 @@ class Order < ApplicationRecord
 
   delegate :name, to: :user, prefix: true
 
-  scope :monthly_order,-> (start_date, end_date) do
-    where ("date(updated_at) > '#{start_date}' AND
-      date(updated_at) <'#{end_date})'")
+  scope :monthly_order, ->(start_date, end_date) do
+    where "date(updated_at) > '#{start_date}' AND
+      date(updated_at) <'#{end_date})'"
   end
 
   enum status: [:in_progress, :shipping, :delivered, :rejected]

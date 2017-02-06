@@ -35,7 +35,6 @@ gem "cancancan"
 gem "simple_form"
 gem "kaminari"
 gem "ransack"
-gem "ffaker"
 gem "carrierwave"
 gem "mini_magick"
 gem "fog"
@@ -53,6 +52,14 @@ gem "groupdate", github: "ankane/groupdate", branch: "sqlite"
 group :development, :test do
   gem "byebug", platform: :mri
   gem "sqlite3"
+  gem "factory_girl_rails"
+  gem "ffaker"
+  gem "rspec-rails"
+  gem "simplecov", require: false
+  gem "shoulda-matchers"
+  gem "database_cleaner"
+  gem "capybara"
+  gem "rails-controller-testing"
 end
 
 group :development do

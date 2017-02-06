@@ -6,8 +6,8 @@ class ProductsController < ApplicationController
       @recent_products = session[:recent]
         .map{|id| Product.find_by(id: id)}.reverse
     end
-    @newest_products = Product.order_by_creation_time_desc.
-      limit Settings.show_limit.show_6
+    @newest_products = Product.order_by_creation_time_desc
+      .limit Settings.show_limit.show_6
     @hot_trend_products = Product.hot_trend.limit Settings.show_limit.show_6
   end
 

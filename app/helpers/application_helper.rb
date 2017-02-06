@@ -43,7 +43,7 @@ module ApplicationHelper
 
   private
   def tree categories, left = 0, right = nil, depth = -1
-    @tree += "<ul id='dropdown-nav' class='dropdown-content'>" if left == 0 && right == nil &&
+    @tree += "<ul id='dropdown-nav' class='dropdown-content'>" if left == 0 && right.nil? &&
       depth == -1
     categories.each do |category|
       if category.lft > left && (right.nil? || category.rgt <
