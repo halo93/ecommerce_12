@@ -53,6 +53,16 @@ gem "groupdate", github: "ankane/groupdate", branch: "sqlite"
 group :development, :test do
   gem "byebug", platform: :mri
   gem "sqlite3"
+  gem "rspec-rails"
+  gem "factory_girl_rails"
+  gem "simplecov"
+  gem "rails-controller-testing"
+end
+
+group :test do
+  gem "shoulda-matchers"
+  gem "database_cleaner"
+  gem "faker"
 end
 
 group :development do
